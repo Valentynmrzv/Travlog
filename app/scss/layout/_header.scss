@@ -56,11 +56,8 @@
 
 .login {
     display: none;
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    font-family: var(--primary-font-family);
+    @include font-title($fs: 14px, $lh: 17px);
     
     @media screen and (min-width: 1024px){
         display: flex;

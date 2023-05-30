@@ -222,11 +222,10 @@ ul {
 
 .login {
   display: none;
-  font-family: "Circular Std";
-  font-style: normal;
+  font-family: var(--primary-font-family);
   font-weight: 700;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2142857143;
 }
 @media screen and (min-width: 1024px) {
   .login {
