@@ -1,0 +1,44 @@
+.modal {
+    width: 100%;
+    max-width: 450px;
+    height: 609px;
+    padding: 40px;
+    
+    @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    height: 581px;
+    }
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    
+        cursor: pointer;
+    
+    }
+}
+.backdrop-close {
+    cursor: default;
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

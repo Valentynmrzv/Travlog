@@ -1,0 +1,75 @@
+.logo {
+    cursor: default;
+    font-family: var(--logo-font-family);
+    @include font(700, 24px, 28px, 0.03em);
+    text-decoration: none;
+
+    &_theme {
+
+        &_light {
+            color: #000000;
+        }
+        &_dark {
+            color: #FFFFFF;
+        }
+    }
+    &__accent {
+        color: var(--brand-color);     
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo {
+        @include font(700, 26px, 31px, 0.03em);
+    }
+}
+
+
+// .logo {
+//     cursor: default;
+//     font-family: var(--logo-font-family);
+//     @include font(700, 26px, 31px, 0.03em);
+//     text-decoration: none;
+
+//     &_theme {
+
+//         &_light {
+//             color: #000000;
+//         }
+//         &_dark {
+//             color: #FFFFFF;
+//         }
+//     }
+//     &__accent {
+//         color: var(--brand-color);
+//     }
+
+//     &:hover {
+//         animation-name: pulse;
+//         animation-duration: 2s;
+//         animation-timing-function: linear;
+//         animation-iteration-count: 4;
+//         animation-direction: alternate;
+//     }
+// }
+// @keyframes pulse {
+//     0% {
+//         transform: scale(1);
+//     }
+
+//     25% {
+//         transform: scale(1.10)
+//     }
+
+//     50% {
+//         transform: scale(1.20);
+//     }
+
+//     75% {
+//         transform: scale(1.10)
+//     }
+
+//     100% {
+//         transform: scale(1);
+//     }
+// }
