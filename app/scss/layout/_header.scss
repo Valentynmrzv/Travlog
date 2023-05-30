@@ -1,0 +1,59 @@
+.header-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+.nav {
+    display: none;
+    @media screen and (min-width: 1440px) {
+        display: flex;
+    }
+}
+
+.login {
+    display: none;
+    @media screen and (min-width: 1024px){
+        display: flex;
+    }
+
+    
+}
+
+
+.mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    
+    background-color: #5D50C6;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 0 0 #5D50C6;
+    letter-spacing: 2px;
+    transition: .15s ease-in-out;
+    fill: #FFFFFF;
+
+    &:hover {
+        box-shadow: 0 0 10px 0 #5D50C6 inset, 0 0 10px 4px #5D50C6;
+    }
+
+    .icon {
+        width: 30px;
+        height: 20px;
+    }
+}
+

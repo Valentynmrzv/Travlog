@@ -4,23 +4,9 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "Circular Std";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
-}
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/Inter-VariableFont_slnt,wght.woff2") format("woff2"),
-        url("../fonts/Inter-VariableFont_slnt,wght.woff") format("woff");
-}
 body {
     
-    font-family: "Inter", sans-serif;
+    font-family: "Circular Std", "Inter", sans-serif;
 
 }
 img {

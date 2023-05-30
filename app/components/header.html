@@ -13,21 +13,57 @@
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header class="header section">
+        <div class="header-row container">
             <a href="" class="logo">
-                <svg width="40" height="40">
-                    <use href="./images/logot.svg"></use>
-                </svg>
-                Travlog
+                <img src="../images/logo-icon.svg" alt="" class="logo__icon">Travlog
             </a>
-            <ul>
-                <li>Home</li>
-                <li>Discover</li>
-                <li>Special Deals</li>
-                <li>Contact</li>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            Discover
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            Special Deals
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                    <a href="" class="nav__link">
+                        Contact
+                    </a>
+                </li>
+                </ul>
+            </nav>
+
+            <ul class="login">
+                <li class="login__item">
+                    <button class="login__button">
+                        Log In
+                    </button>
+                </li>
+                <li class="login__item">
+                    <button class="login__button sign-up">
+                        Sign Up
+                    </button>
+                </li>
             </ul>
-        </nav>
+
+            <button class="mobile-menu">
+                <svg class="mobile-menu icon">
+                <use href="../images/sprite.svg#icon-mobile-menu"></use>
+                </svg>
+            </button>
+            
+
+        </div>
         
     </header>
     <main>
