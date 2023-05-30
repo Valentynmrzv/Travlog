@@ -148,8 +148,17 @@ ul {
 .logo__icon {
   width: 40px;
   height: 40px;
+  animation: 10s linear 0s normal none infinite running rotate;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header {
   position: relative;
 }
