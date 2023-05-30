@@ -6,7 +6,8 @@
 
 body {
     
-    font-family: "Circular Std", "Inter", sans-serif;
+    font-family: var(--primary-font-family), var(--secondary-font-family), sans-serif;
+    font-style: normal;
 
 }
 img {
@@ -24,6 +25,7 @@ h6,
 p {
     margin: 0px;
     padding: 0px;
+    @include font-text;
     color: var(--primary-text-color);
 }
 

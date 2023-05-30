@@ -1,31 +1,102 @@
+.header {
+    position: relative;
+}
+
+.shadow {
+    display: none;
+    @media screen and (min-width: 1024px) {
+        display: block;
+        position: absolute;
+        left: -356px;
+        top: -223px;
+        height: 500px;
+        width: 500px;
+        background-color: #FF5722;
+        border-radius: 50%;
+        opacity: 0.5;
+        filter: blur(250px);
+    }
+    @media screen and (min-width: 1440px) {
+        display: none;
+    }
+}
 .header-row {
     display: flex;
     justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
-    &__icon {
-        width: 40px;
-        height: 40px;
-    }
-}
-
 
 .nav {
     display: none;
     @media screen and (min-width: 1440px) {
         display: flex;
     }
+    &__list{
+        display: flex;
+        gap: 64px;
+        align-items: center;
+    }
+    &__link {    
+        color: var(--primary-text-color);
+        transition: .15s ease-in-out;
+        @include font-title($fs: 14px, $lh: 17px);
+       
+        &.home {
+            color: var(--secondary-text-color);
+        }
+
+        &:hover {
+            color: var(--brand-color);
+
+        }
+    }
+
 }
 
 .login {
     display: none;
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    
     @media screen and (min-width: 1024px){
         display: flex;
+    }
+
+    &__button {
+        width: 105px;
+        height: 49px;
+        border: 0;
+        border-radius: 100px;
+
+    }
+    .log-in {
+        font-family: var(--primary-font-family);
+        color: var(--secondary-text-color);
+        @include font-title($fs: 14px, $lh: 17px);
+        background-color: #FFFFFF;
+        transition: var(--transition-property);
+        
+
+        &:hover {
+            color: var(--brand-color);
+        }
+    
+    }
+
+    .sign-up {
+        font-family: var(--primary-font-family);
+        @include font-title($fs: 14px, $lh: 17px);
+        color: #EEEEEE;
+        background-color: var(--brand-color);
+        transition: var(--transition-property);
+
+        &:hover {
+            box-shadow: 0 0 1px 0 var(--brand-color) inset, 0 0 8px 4px var(--brand-color);
+        }
     }
 
     
@@ -37,23 +108,33 @@
     justify-content: center;
     align-items: center;
     border: 0;
+    width: 40px;
+    height: 40px;
     
-    background-color: #5D50C6;
+    background-color:var(--brand-color);
 
     border-radius: 10px;
 
-    box-shadow: 0 0 0 0 #5D50C6;
+    box-shadow: 0 0 0 0 var(--brand-color);
     letter-spacing: 2px;
     transition: .15s ease-in-out;
     fill: #FFFFFF;
 
     &:hover {
-        box-shadow: 0 0 10px 0 #5D50C6 inset, 0 0 10px 4px #5D50C6;
+        box-shadow: 0 0 10px 0 var(--brand-color) inset, 0 0 10px 4px var(--brand-color);
+        fill: black;
     }
 
-    .icon {
+    &__icon {
         width: 30px;
-        height: 20px;
+        height: 25px;
+    }
+
+    @media screen and (min-width: 1024px) {
+    order: -1;
+    }
+    @media screen and (min-width: 1440px) {
+        display: none;
     }
 }
 

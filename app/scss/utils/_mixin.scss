@@ -1,0 +1,10 @@
+@mixin font-title($fw: 700,$fs: 28px,$lh: 24px) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: calc($lh/$fs);
+}
+@mixin font-text($fw: 400, $fs: 18px, $lh: 29px) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: calc($lh/$fs);
+}
