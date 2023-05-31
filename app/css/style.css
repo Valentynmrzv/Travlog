@@ -3,7 +3,7 @@
   --title-text-color: #191825;
   --primary-text-color: rgba(25, 24, 37, 0.5);
   --secondary-text-color: #222831;
-  --primary-bg-color: #E8E8E8;
+  --primary-bg-color: #FFFFFF;
   --primary-font-family: "Circular Std";
   --secondary-font-family: "Inter";
   --transition-property: 150ms ease-in-out;
@@ -65,6 +65,7 @@
 body {
   font-family: var(--primary-font-family), var(--secondary-font-family), sans-serif;
   font-style: normal;
+  background-color: var(--primary-bg-color);
 }
 
 img {
@@ -159,15 +160,19 @@ ul {
     transform: rotate(360deg);
   }
 }
-.header {
+.header-row {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-
-.shadow {
+.header-row::before {
+  content: "";
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  .shadow {
+  .header-row::before {
     display: block;
     position: absolute;
     left: -356px;
@@ -181,16 +186,9 @@ ul {
   }
 }
 @media screen and (min-width: 1440px) {
-  .shadow {
+  .header-row::before {
     display: none;
   }
-}
-
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .nav {
