@@ -1,7 +1,9 @@
 .hero-wrapper {
     display: flex;
     flex-direction: column-reverse;
-
+    @media screen and (min-width: 1440px) {
+        flex-direction: row;
+    }
 
 }
 .promo {
@@ -12,6 +14,10 @@
 
     @media screen and (min-width: 1024px) {
         margin-top: 64px;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 412px;
+        height: 577px;
     }
 
     
@@ -55,7 +61,11 @@
             margin-top: 43px;
             padding-left: 130px;
             padding-right: 130px;
-
+        }
+        @media screen and (min-width: 1440px) {
+            padding: 0;
+            text-align: start;
+            @include font-title($fs: 69px, $lh: 82px);
         }
     }
     &__text {
@@ -67,6 +77,9 @@
         @media screen and (min-width: 1024px) {
             margin-top: 43px;
             @include font-title($fs: 18px, $lh: 29px);
+        }
+        @media screen and (min-width: 1440px) {
+            text-align: start;
         }
     }
 }
@@ -173,7 +186,7 @@
 
     }
 
-    &__item{
+    &__item {
             &:first-child {
             padding-bottom: 16px;
             @media screen and (min-width: 1024px) {
