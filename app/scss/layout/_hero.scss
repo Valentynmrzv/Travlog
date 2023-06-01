@@ -1,12 +1,20 @@
 .hero-wrapper {
     display: flex;
     flex-direction: column-reverse;
+
+
 }
 .promo {
     margin-top: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 64px;
+    }
+
+    
 
     &__link {
         font-family: var(--primary-font-family);
@@ -41,12 +49,25 @@
         .accent {
             color: var(--accent-text-color);
         }
+
+        @media screen and (min-width: 1024px) {
+            @include font-title($fs: 56px, $lh: 67px);
+            margin-top: 43px;
+            padding-left: 130px;
+            padding-right: 130px;
+
+        }
     }
     &__text {
         margin-top: 24px;
         font-family: var(--secondary-font-family);
         @include font-text($fs: 16px, $lh: 26px);
         text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 43px;
+            @include font-title($fs: 18px, $lh: 29px);
+        }
     }
 }
 .button {
@@ -58,17 +79,25 @@
     justify-content: center;
     align-items: flex-start;
     gap: 8px;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        margin-top: 43px;
+    }
     }
 
     &__item {
         
         padding: 24px 32px;
-        
-        
-        
         width: 398px;
         height: 65px;
         border-radius: 100px;
+
+        @media screen and (min-width: 1024px) {
+            padding: 16px 32px;
+            width: 141px;
+            height: 49px;
+        }
 
         &.started {
             background: #5D50C6;
@@ -78,13 +107,15 @@
         &.demo {
             background: #FFFFFF;
             border: 1px solid #EEEEEE;
+            width: 181px;
+            height: 56px;
         }
     }
 
     &__link {
         @include font-title($fs: 14px, $lh: 17px);
         font-family: var(--primary-font-family);
-        text-align: center;
+        text-align: start;
 
         display: flex;
         flex-direction: row;
