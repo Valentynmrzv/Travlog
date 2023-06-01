@@ -109,28 +109,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0;
-    width: 40px;
-    height: 40px;
-    
-    background-color:var(--brand-color);
-
     border-radius: 10px;
+    border: 0;
+    padding: 0; 
+    // opacity: 0;
+    background: none;
+    fill: var(--brand-color);
 
-    box-shadow: 0 0 0 0 var(--brand-color);
-    letter-spacing: 2px;
-    transition: .15s ease-in-out;
-    fill: #FFFFFF;
+    transition: 300ms ease-in;
 
     &:hover {
-        box-shadow: 0 0 10px 0 var(--brand-color) inset, 0 0 10px 4px var(--brand-color);
-        fill: black;
+        fill: #433991;
+    }
+    &:active {
+        
     }
 
+    
+
     &__icon {
-        width: 30px;
-        height: 25px;
+        width: 48px;
+        height: 48px;
     }
+    
 
     @media screen and (min-width: 1024px) {
     order: -1;
