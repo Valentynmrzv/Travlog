@@ -623,8 +623,8 @@ ul {
 }
 .img-hero__link {
   position: absolute;
-  top: 212px;
-  left: 257px;
+  top: 37px;
+  left: 130px;
   display: flex;
   flex-direction: row;
   gap: 4px;
