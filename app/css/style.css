@@ -241,41 +241,66 @@ ul {
   display: inline-block;
 }
 .login .log-in {
-  font-family: var(--primary-font-family);
-  color: var(--secondary-text-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.2142857143;
   background-color: #FFFFFF;
   transition: var(--transition-property);
 }
 .login .log-in::before {
+  position: absolute;
+  content: "";
+  border-radius: 100px;
+  border: 2px solid #000000;
   top: 0;
   bottom: 0;
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 1;
+  opacity: 0;
   background-color: var(--brand-color);
   transition: 0.3s ease-out;
 }
 .login .log-in:hover::before {
-  opacity: 0;
+  opacity: 1;
 }
-.login .log-in:hover {
-  color: var(--brand-color);
-}
-.login .sign-up {
+.login .log-in span {
+  position: relative;
+  display: inline-block;
   font-family: var(--primary-font-family);
+  color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2142857143;
-  color: #EEEEEE;
+  transition: 0.2s;
+}
+.login .sign-up {
   background-color: var(--brand-color);
   transition: var(--transition-property);
 }
-.login .sign-up:hover {
-  box-shadow: 0 0 1px 0 var(--brand-color) inset, 0 0 8px 4px var(--brand-color);
+.login .sign-up::before {
+  position: absolute;
+  content: "";
+  border-radius: 100px;
+  border: 2px solid var(--brand-color);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #FFFFFF;
+  transition: 0.3s ease-out;
+}
+.login .sign-up:hover::before {
+  opacity: 1;
+}
+.login .sign-up span {
+  position: relative;
+  display: inline-block;
+  font-family: var(--primary-font-family);
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2142857143;
+  transition: 0.2s;
 }
 
 .mobile-menu {

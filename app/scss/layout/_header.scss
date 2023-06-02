@@ -75,50 +75,80 @@
         border-radius: 100px;
         position: relative;
         display: inline-block;
-
     }
     .log-in {
-        font-family: var(--primary-font-family);
-        color: var(--secondary-text-color);
-        @include font-title($fs: 14px, $lh: 17px);
+        
         background-color: #FFFFFF;
         transition: var(--transition-property);
 
         &::before {
+            position: absolute;
+            content: '';
+            border-radius: 100px;
+            border: 2px solid #000000;
             top: 0;
             bottom: 0;
             right: 0;
             height: 100%;
             width: 100%;
-            opacity: 1;
+            opacity: 0;
             background-color: var(--brand-color);
             transition: 0.3s ease-out;
+        
         }
         &:hover::before {
-            opacity: 0;
+            opacity: 1;
         }
-        
-
-        &:hover {
-            color: var(--brand-color);
-        }
+        span {
+            position: relative;
+            display: inline-block;
+            font-family: var(--primary-font-family);
+            color: var(--secondary-text-color);
+            @include font-title($fs: 14px, $lh: 17px);
+            transition: 0.2s;
     
+        }
     }
-
+    
     .sign-up {
-        font-family: var(--primary-font-family);
-        @include font-title($fs: 14px, $lh: 17px);
-        color: #EEEEEE;
+        // font-family: var(--primary-font-family);
+        // @include font-title($fs: 14px, $lh: 17px);
+        // color: var(--secondary-text-color);
         background-color: var(--brand-color);
         transition: var(--transition-property);
+        
 
-        &:hover {
-            box-shadow: 0 0 1px 0 var(--brand-color) inset, 0 0 8px 4px var(--brand-color);
+        &::before {
+            position: absolute;
+            content: '';
+            border-radius: 100px;
+            border: 2px solid var(--brand-color);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+        
+            background-color: #FFFFFF;
+            transition: 0.3s ease-out;
+        }
+    
+        &:hover::before {
+            opacity: 1;
+        }
+        span {
+            position: relative;
+            display: inline-block;
+            font-family: var(--primary-font-family);
+            color: var(--secondary-text-color);
+            @include font-title($fs: 14px, $lh: 17px);
+            transition: 0.2s;
+      
         }
     }
-
-    
 }
+
 
 
 .mobile-menu {
