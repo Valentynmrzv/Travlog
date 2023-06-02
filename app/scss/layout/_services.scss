@@ -1,14 +1,18 @@
 .services {
+    // @media screen and (min-width: 1440px) {
+    //     overflow: hidden;
+    // }
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 32px 16px;
-        @media screen and (min-width: 1024px) {
-
+        @media screen and (min-width: 1440px) {
+            overflow: hidden;
             flex-direction: row;
         }
+        
 
     }
     &__text {
@@ -17,6 +21,9 @@
         text-transform: uppercase;
         color: var(--accent-text-color);
         @include font-title($fs: 16px, $lh: 19px);
+        @media screen and (min-width: 1440px) {
+            text-align: start;
+        }
         
     }
     &__title {
@@ -24,6 +31,10 @@
         text-align: center;
         @include font-title($fs: 32px, $lh: 38px);
         color: var(--title-text-color);
+        @media screen and (min-width: 1440px) {
+            text-align: start;
+            width: 336px;
+        }
     }
 
     &__list {
@@ -31,11 +42,22 @@
         gap: 16px;
         display: flex;
         flex-direction: column;
+        flex-grow: 0;
 
         @media screen and (min-width: 1024px) {
             flex-direction: row;
         }
+        @media screen and (min-width: 1440px) {
+            flex-grow: 1;
+            gap: 21px;
 
+        }
+    }
+}
+.text-wrapper {
+    @media screen and (min-width: 1440px) {
+        flex-grow: 1;
+        margin-right: 40px;
     }
 }
 
@@ -52,6 +74,10 @@
     @media screen and (min-width: 1024px) {
         padding: 64px;
     }
+    @media screen and (min-width: 1440px) {
+        width: 350px;
+        height: 443px;
+    }
 
     &:hover {
         box-shadow: 0px 41px 89px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -59,6 +85,9 @@
 
     &__img {
         width: 64px;
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 32px;
+        }
     }
 
     &__title {
@@ -73,4 +102,6 @@
 
 
 }
+
+
 
