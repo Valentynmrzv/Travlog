@@ -390,10 +390,14 @@ ul {
   background: #FFFFFF;
   box-shadow: 0px 548px 219px rgba(0, 0, 0, 0.01), 0px 308px 185px rgba(0, 0, 0, 0.04), 0px 137px 137px rgba(0, 0, 0, 0.06), 0px 34px 75px rgba(0, 0, 0, 0.07), 0px 0px 0px rgba(0, 0, 0, 0.07);
   border-radius: 100px;
+  transition: 250ms;
 }
 .promo__link .icon {
   width: 24px;
   height: 24px;
+}
+.promo__link:hover {
+  box-shadow: 0px 81px 32px rgba(0, 0, 0, 0.01), 0px 45px 27px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.09), 0px 5px 11px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 .promo__title {
   margin-top: 16px;
@@ -477,17 +481,24 @@ ul {
 }
 .button__item.started {
   background: #5D50C6;
+  transition: 250ms;
+}
+.button__item.started:hover {
   box-shadow: 0px 81px 32px rgba(0, 0, 0, 0.01), 0px 45px 27px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.09), 0px 5px 11px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 .button__item.demo {
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
+  transition: 250ms;
 }
 @media screen and (min-width: 1024px) {
   .button__item.demo {
     width: 181px;
     height: 56px;
   }
+}
+.button__item.demo:hover {
+  box-shadow: 0px 81px 32px rgba(0, 0, 0, 0.01), 0px 45px 27px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.09), 0px 5px 11px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 .button__link {
   font-weight: 700;
