@@ -3,20 +3,20 @@
     margin: 0 auto;
     padding-left: 8px;
     padding-right: 8px;
-
+    max-width: 420px;
 
     @media screen and (min-width: 480px) {
-        width: 430px;
+        max-width: 430px;
         padding-left: 16px;
         padding-right: 16px;
     }
 
     @media screen and (min-width: 1024px) {
-        width: 896px;
+        max-width: 896px;
     }
 
     @media screen and (min-width: 1440px) {
-        width: 1200px;
+        max-width: 1200px;
         padding-left: 8px;
         padding-right: 8px;
     }
