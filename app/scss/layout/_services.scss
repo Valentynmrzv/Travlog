@@ -105,3 +105,37 @@
 
 
 
+.explore {
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.explore-btn {
+    display: flex;
+    justify-content: space-between;
+    &__button {
+        width: 64px;
+        height: 64px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid rgba(25, 24, 37, 0.1);
+        transition: var(--transition-property);
+        &:hover {
+            background-color: var(--brand-color);
+        }
+
+    }
+    &__icon {
+        width: 20px;
+        height: 20px;
+        transition: var(--transition-property);
+
+        .explore-btn__button:hover & {
+            fill: #FFFFFF;
+        }
+    }
+}

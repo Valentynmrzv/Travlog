@@ -828,3 +828,36 @@ ul {
 .categories__text {
   text-align: center;
 }
+
+.explore {
+  display: flex;
+  flex-direction: column;
+}
+.explore__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.explore-btn__button {
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(25, 24, 37, 0.1);
+  transition: var(--transition-property);
+}
+.explore-btn__button:hover {
+  background-color: var(--brand-color);
+}
+.explore-btn__icon {
+  width: 20px;
+  height: 20px;
+  transition: var(--transition-property);
+}
+.explore-btn__button:hover .explore-btn__icon {
+  fill: #FFFFFF;
+}
