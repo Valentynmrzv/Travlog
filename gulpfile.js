@@ -113,7 +113,7 @@ function building() {
         'app/css/style.min.css',
         'app/images/*.*',
         '!app/images/stack',
-        '!app/images/*.svg',
+        // '!app/images/*.svg',
         'app/images/sprite.svg',
         'app/fonts/*.*',
         'app/js/main.min.js',
