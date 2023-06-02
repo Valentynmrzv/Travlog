@@ -315,14 +315,13 @@
 
 
     &__list {
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 27px;
         margin-left: auto;
         margin-right: auto;
-        width: 398px;
+        width: 380px;
         @media screen and (min-width: 1024px) {
             width: 568px;
         }

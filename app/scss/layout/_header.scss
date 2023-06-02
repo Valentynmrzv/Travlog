@@ -85,7 +85,7 @@
             position: absolute;
             content: '';
             border-radius: 100px;
-            border: 2px solid #000000;
+            border: 2px solid #FFFFFF;
             top: 0;
             bottom: 0;
             right: 0;
@@ -109,15 +109,8 @@
     
         }
     }
-    
     .sign-up {
-        // font-family: var(--primary-font-family);
-        // @include font-title($fs: 14px, $lh: 17px);
-        // color: var(--secondary-text-color);
         background-color: var(--brand-color);
-        transition: var(--transition-property);
-        
-
         &::before {
             position: absolute;
             content: '';
@@ -141,12 +134,19 @@
             position: relative;
             display: inline-block;
             font-family: var(--primary-font-family);
-            color: var(--secondary-text-color);
+            color: #EEEEEE;
             @include font-title($fs: 14px, $lh: 17px);
             transition: 0.2s;
       
         }
     }
+}
+.log-in:hover span {
+    color: #EEEEEE;
+}
+
+.sign-up:hover span {
+    color: var(--secondary-text-color);
 }
 
 
