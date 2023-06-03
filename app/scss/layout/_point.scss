@@ -1,0 +1,158 @@
+.point {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @media screen and (min-width: 1024px) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    &::before {
+        content: '';
+        display: block;
+        min-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 398px;
+        height: 318px;
+        background-image: url(../../images/point-bg.png);
+        background-size: cover;
+        background-position: center;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../../images/point-bg@2x.png);
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 871px;
+            height: 697px;
+        }
+        @media screen and (min-width: 1440px) {
+            width: 871px;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+
+    &__wrapper {
+        @media screen and (min-width: 1440px) {
+            width: 441px;
+            margin-left: 0;
+            margin-right: 0;
+            
+        }
+        
+    }
+    
+
+
+
+    &__subtitle {
+        margin-top: 64px;
+        @include font-title($fs: 16px, $lh: 19px);
+        text-align: center;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent-text-color);
+        @media screen and (min-width: 1024px) {
+            @include font-title($fs: 23px, $lh: 28px);
+        }
+        @media screen and (min-width: 1440px) {
+            text-align: start;
+        }
+    }
+    &__title {
+        margin-top: 16px;
+        @include font-title($fs: 32px, $lh: 38px);
+        text-align: center;
+        color: var(--title-text-color);
+        @media screen and (min-width: 1024px) {
+            @include font-title($fs: 40px, $lh: 48px);
+        }
+        @media screen and (min-width: 1440px) {
+            text-align: start;
+        }
+
+    }
+
+    &__text {
+        margin-top: 16px;
+        font-family: var(--secondary-font-family);
+        @include font-text($fs: 16px, $lh: 26px);
+        text-align: center;
+        @media screen and (min-width: 1024px) {
+            @include font-text;
+        }
+        @media screen and (min-width: 1440px) {
+            text-align: start;
+        }
+    }
+
+    &__list {
+        position: relative;
+        margin-top: 32px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 64px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &::before {
+            @media screen and (min-width: 1440px) {
+                position: absolute;
+                top: -140px;
+                left: 284px;
+                content: '';
+                background-image: url(../../images/point-icon.png);
+                background-size: cover;
+                width: 285px;
+                height: 353px;
+
+
+
+            }
+
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 32px;
+            border: 1px solid rgba(25, 24, 37, 0.1);
+            border-radius: 32px;
+            width: 100%;
+            @media screen and (min-width: 1024px) {
+                width: calc((100% - 16px)/2);
+        
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+    
+        }
+        .title {
+            @include font-title($fs: 35px, $lh: 42px);
+            color: #FF5722;
+        }
+        .text {
+            @include font-text($fs: 18px, $lh: 29px);
+            color: var(--title-text-color);
+        }
+    }
+}
