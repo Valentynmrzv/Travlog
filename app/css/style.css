@@ -728,9 +728,14 @@ ul {
   align-items: center;
   padding: 32px 16px;
 }
+@media screen and (min-width: 1024px) {
+  .services__wrapper {
+    padding: 64px 16px;
+  }
+}
 @media screen and (min-width: 1440px) {
   .services__wrapper {
-    overflow: hidden;
+    overflow-x: clip;
     flex-direction: row;
   }
 }
@@ -983,7 +988,7 @@ ul {
   border-radius: 32px 32px 32px 32px;
   border: 1px solid rgba(25, 24, 37, 0.1);
   transition: var(--transition-property);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 1024px) {
   .explore-img__item {
