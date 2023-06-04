@@ -782,15 +782,6 @@ ul {
   }
 }
 
-.carousel.dragging {
-  cursor: grab;
-  scroll-behavior: auto;
-}
-
-.carousel.dragging .services__item {
-  pointer-events: none;
-}
-
 @media screen and (min-width: 1440px) {
   .text-wrapper {
     flex-grow: 1;

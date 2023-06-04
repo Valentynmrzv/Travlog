@@ -69,6 +69,8 @@ function sprite() {
 
 function scripts() {
     return src([
+        'node_modules/swiper/swiper-bundle.js',
+        'app/js/*.js',
         'app/js/main.js',
         '!app/js/main.min.js'
     ])
