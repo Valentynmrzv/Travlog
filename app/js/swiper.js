@@ -1,4 +1,4 @@
-let myImageSlider = new Swiper('.explore', {
+let myImageSlider = new Swiper('.slide-img', {
 	// arrow
 	navigation: {
 		nextEl: '.btn-next',
@@ -14,19 +14,18 @@ let myImageSlider = new Swiper('.explore', {
 		watchState: true,
 	},
 
-	autoHeight: false,
-
+    autoHeight: false,
     
-    breakpoints: {
+    // slidesPerView: 3,
+    // slidesPerGroup: 3,
+       breakpoints: {
     320: {
+        slidesPerGroup: 1,
         slidesPerView: 1,
-        // Количество пролистываемых слайдов
-	    slidesPerGroup: 1,
     },
     1024: {
+        slidesPerGroup: 3,
         slidesPerView: 3,
-        // Количество пролистываемых слайдов
-	    slidesPerGroup: 3,
     }
 	},
 
