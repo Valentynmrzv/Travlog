@@ -51,26 +51,12 @@
         }
         
     }
-    
-
-
-
-    &__subtitle {
-        margin-top: 64px;
-        @include font-title($fs: 16px, $lh: 19px);
-        text-align: center;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--accent-text-color);
-        @media screen and (min-width: 1024px) {
-            @include font-title($fs: 23px, $lh: 28px);
-        }
-        @media screen and (min-width: 1440px) {
-            text-align: start;
-        }
-    }
     &__title {
         margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
         @include font-title($fs: 32px, $lh: 38px);
         text-align: center;
         color: var(--title-text-color);
@@ -79,12 +65,27 @@
         }
         @media screen and (min-width: 1440px) {
             text-align: start;
+            align-items: flex-start;
+        }
+
+        &::before {
+            content: 'Travel Point';
+            margin-top: 64px;
+            
+            @include font-title($fs: 16px, $lh: 19px);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-text-color);
+        
+            @media screen and (min-width: 1024px) {
+                @include font-title($fs: 23px, $lh: 28px);
+            }
         }
 
     }
 
     &__text {
-        margin-top: 16px;
+        margin-top: 32px;
         font-family: var(--secondary-font-family);
         @include font-text($fs: 16px, $lh: 26px);
         text-align: center;
@@ -133,7 +134,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 32px;
+            padding: 31px;
             border: 1px solid rgba(25, 24, 37, 0.1);
             border-radius: 32px;
             width: 100%;
@@ -151,8 +152,205 @@
             color: #FF5722;
         }
         .text {
-            @include font-text($fs: 18px, $lh: 29px);
             color: var(--title-text-color);
+        }
+    }
+}
+
+.features {
+    padding: 32px 8px;
+    
+    
+
+    @media screen and (min-width: 1024px) {
+        padding: 64px 96px 64px 96px;
+        
+    }
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        gap: 70px;
+        padding: 64px 0px 64px 128px;
+        max-width: none;
+    }
+
+
+    &::before {
+        content: '';
+        display: block;
+        min-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 350px;
+        height: 439px;
+        background-image: url(../images/features-bg.png);
+        background-size: cover;
+        background-position: center;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/features-bg@2x.png);
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 693px;
+            height: 869px;
+        }
+        @media screen and (min-width: 1440px) {
+            display: none;
+        }
+    }
+    &::after {
+        @media screen and (min-width: 1440px) {
+            content: '';
+            display: block;
+            background-image: url(../images/features-bg.png);
+            background-size: cover;
+            background-position: center;
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/features-bg@2x.png);
+            }
+            width: 693px;
+            height: 869px;
+            margin-left: 0;
+            margin-right: 0;
+
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 300px;
+        max-width: 350px;
+
+        @media screen and (min-width: 1024px) {
+            max-width: 832px;
+        }
+        @media screen and (min-width: 1440px) {
+            max-width: none;
+            width: 550px;
+            align-items: flex-start;
+    
+        }
+    }
+    &__title {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        @include font-title($fs: 32px, $lh: 38px);
+        text-align: center;
+        color: var(--title-text-color);
+
+        @media screen and (min-width: 1024px) {
+            @include font-title($fs: 40px, $lh: 48px);
+        }
+
+        @media screen and (min-width: 1440px) {
+            text-align: start;
+            align-items: flex-start;
+        }
+
+        &::before {
+            content: 'Key features';
+            margin-top: 64px;
+
+            @include font-title($fs: 16px, $lh: 19px);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-text-color);
+
+            @media screen and (min-width: 1024px) {
+                @include font-title($fs: 23px, $lh: 28px);
+            }
+        }
+
+    }
+
+    &__text {
+        margin-top: 32px;
+        font-family: var(--secondary-font-family);
+        @include font-text($fs: 16px, $lh: 26px);
+        text-align: center;
+
+        min-width: 320px;
+
+        @media screen and (min-width: 1024px) {
+            @include font-text;
+            max-width: 830px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            text-align: start;
+        }
+    }
+
+    &__list {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        width: 100%;
+    }
+    &__item {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        border-radius: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition-property);
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            align-items: center;
+
+            
+        }
+
+        &:hover {
+            border: 1px solid rgba(25, 24, 37, 0.1);
+        }
+        .image {
+            position: relative;
+            width: 100px;
+            height: 100px;
+
+            border-radius: 32px;
+        }
+        .location {
+            background: #FF5722;
+        }
+        .calendar {
+            background: #FACD49;
+        }
+        .ticket {
+            background: #F85E9F;
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+        }
+        .title {
+            @include font-title($fs: 23px, $lh: 28px);
+            color: var(--title-text-color);
+            margin-bottom: 8px;
+        }
+        .text {
+            font-family: var(--secondary-font-family);
         }
     }
 }
