@@ -148,11 +148,6 @@ ul {
   font-family: var(--primary-font-family);
   color: var(--title-text-color);
 }
-.logo__icon {
-  width: 40px;
-  height: 40px;
-  animation: 10s linear 0s normal none infinite running rotate;
-}
 
 @keyframes rotate {
   0% {
@@ -162,6 +157,75 @@ ul {
     transform: rotate(360deg);
   }
 }
+.loader-img {
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--brand-color);
+}
+
+.loader-img svg {
+  height: 100%;
+  position: absolute;
+}
+
+.loader-img svg.plane {
+  width: 100%;
+}
+
+@-webkit-keyframes clouds {
+  0% {
+    -webkit-transform: translateX(60px);
+    transform: translateX(60px);
+  }
+  100% {
+    -webkit-transform: translateX(-130px);
+    transform: translateX(-130px);
+  }
+}
+@keyframes clouds {
+  0% {
+    -webkit-transform: translateX(60px);
+    transform: translateX(60px);
+  }
+  100% {
+    -webkit-transform: translateX(-130px);
+    transform: translateX(-130px);
+  }
+}
+.loader-img svg.clouds {
+  -webkit-animation: 4s linear infinite clouds;
+  animation: 4s linear infinite clouds;
+  width: 130px;
+}
+
+@-webkit-keyframes plane {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+@keyframes plane {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+.loader-img svg.plane {
+  -webkit-animation: 4s linear infinite plane;
+  animation: 4s linear infinite plane;
+}
+
 .header-row {
   position: relative;
   display: flex;
