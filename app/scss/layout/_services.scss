@@ -219,9 +219,14 @@
         }
     }
 }
-.explore-img {
+.slide-img {
+    overflow-x: clip;
     padding-top: 32px;
     padding-bottom: 32px;
+
+}
+.explore-img {
+
     @media screen and (min-width: 1024px) {
         padding-top: 64px;
         padding-bottom: 64px;
@@ -297,7 +302,5 @@
     }
     
 }
-// .slide-img {
-//     overflow: hidden;
-// }
+
 

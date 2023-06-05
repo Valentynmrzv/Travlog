@@ -969,10 +969,12 @@ ul {
   fill: #FFFFFF;
 }
 
-.explore-img {
+.slide-img {
+  overflow-x: clip;
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 @media screen and (min-width: 1024px) {
   .explore-img {
     padding-top: 64px;
