@@ -727,6 +727,7 @@ ul {
   flex-direction: column;
   align-items: center;
   padding: 32px 16px;
+  min-width: 0;
 }
 @media screen and (min-width: 1440px) {
   .services__wrapper {
@@ -973,6 +974,12 @@ ul {
   overflow-x: clip;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .slide-img {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
