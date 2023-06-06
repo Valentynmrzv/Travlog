@@ -16,8 +16,6 @@
         }
 
         @media screen and (min-width: 1440px) {
-            align-items: flex-start;
-            text-align: start;
             @include font-title($fs: 44px, $lh: 53px);
         }
 
