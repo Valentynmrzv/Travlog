@@ -1,6 +1,47 @@
 .reviews {
+    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
+    overflow-x: clip;
+    @media screen and (min-width: 1024px) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        &::before {
+                @media screen and (min-width: 1024px) {
+                content: '';
+                position: absolute;
+                top: -260px;
+                left: 0px;
+                background-image: url(../images/reviews-bg-tablet.png);
+                background-position: 50% 25%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 1024px;
+                height: 900px;
+                overflow: visible;
+                @media (min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                    background-image: url(../images/reviews-bg-tablet@2x.png);
+                }
+            }
+            @media screen and (min-width: 1440px) {
+                opacity: 0.1;
+                top: -85px;
+                left: 0px;
+                width: 1400px;
+                background-image: url(../images/reviews-bg.png);
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/reviews-bg@2x.png);
+                }
+
+            }
+        }
+    }
+    
 
     
 
@@ -44,6 +85,9 @@
     .swiper-pagination {
         position: relative;
         margin-top: 64px;
+        @media screen and (min-width: 1024px) {
+            padding-top: 56px;
+        }
 
     }
     .swiper-pagination-bullet {
@@ -61,6 +105,9 @@
 .reviews-list {
     padding-top: 64px;
     background-color: transparent;
+        @media screen and (min-width: 1024px) {
+            padding-top: 56px;
+        }
     &__item {
         display: flex;
         flex-direction: column;
@@ -76,6 +123,9 @@
         margin-top: 64px;
         @include font-title($fs: 23px, $lh: 28px);
         color: rgba(25, 24, 37, 0.75);
+        @media screen and (min-width: 1024px) {
+            margin-top: 56px;
+        }
         span {
             @include font-title($fs: 28px, $lh: 34px);
             color: #FF5722;
@@ -90,6 +140,7 @@
         min-width: 200px;
         max-width: 584px;
         @media screen and (min-width: 1024px) {
+            margin-top: 56px;
             @include font-text($fw: 450, $fs: 23px, $lh: 37px)
         }
 
@@ -119,21 +170,21 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (min-width: 1024px) {
-        margin-top: 64px;
-        justify-content: center;
-        gap: 32px;
-    }
+    // @media screen and (min-width: 1024px) {
+    //     margin-top: 64px;
+    //     justify-content: center;
+    //     gap: 32px;
+    // }
 
-    @media screen and (min-width: 1440px) {
-        margin-top: 0;
-    }
+    // @media screen and (min-width: 1440px) {
+    //     margin-top: 0;
+    // }
 
     &__button {
         position: relative;
         width: 64px;
         height: 64px;
-        background-color: transparent;
+        background-color: #FFFFFF;
         border-radius: 50%;
         border: 1px solid rgba(25, 24, 37, 0.1);
         transition: var(--transition-property);
@@ -170,7 +221,7 @@
             position: absolute;
             top: 50%;
             left: 0;
-            transform: -50%;
+            transform: translateY(-50%);
         }
     }
     .btn-next {
@@ -178,7 +229,7 @@
             position: absolute;
             top: 50%;
             right: 0;
-            transform: -50%;
+            transform: translateY(-50%);
         }
     }
 
