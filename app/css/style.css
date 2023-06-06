@@ -1556,8 +1556,21 @@ ul {
 }
 
 .reviews-swiper {
-  position: relative;
   overflow-x: clip;
+  position: relative;
+}
+.reviews-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 64px;
+}
+.reviews-swiper .swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(25, 24, 37, 0.3);
+  transform: none;
+}
+.reviews-swiper .swiper-pagination-bullet-active {
+  background-color: var(--accent-text-color);
 }
 
 .reviews-list {
@@ -1594,6 +1607,20 @@ ul {
   line-height: 1.6111111111;
   color: rgba(25, 24, 37, 0.75);
   text-align: center;
+  min-width: 200px;
+  max-width: 584px;
+}
+@media screen and (min-width: 1024px) {
+  .reviews-list__text {
+    font-weight: 450;
+    font-size: 23px;
+    line-height: 1.6086956522;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .reviews-list__text {
+    max-width: 872px;
+  }
 }
 
 .star-list {
@@ -1635,6 +1662,7 @@ ul {
   border-radius: 50%;
   border: 1px solid rgba(25, 24, 37, 0.1);
   transition: var(--transition-property);
+  z-index: 10;
 }
 @media screen and (min-width: 1024px) {
   .reviews-btn__button {
@@ -1658,6 +1686,22 @@ ul {
 }
 .reviews-btn__button:hover::before {
   opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+  .reviews-btn .btn-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: -50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .reviews-btn .btn-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: -50%;
+  }
 }
 .reviews-btn__icon {
   width: 20px;
