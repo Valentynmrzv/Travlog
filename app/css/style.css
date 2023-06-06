@@ -1557,8 +1557,13 @@ ul {
   }
 }
 
+.reviews-swiper {
+  position: relative;
+  overflow-x: clip;
+}
+
 .reviews-list {
-  padding: 64px 0px;
+  padding-top: 64px;
   background-color: transparent;
 }
 .reviews-list__item {
@@ -1605,4 +1610,70 @@ ul {
 .star-list .item .icon {
   width: 32px;
   height: 32px;
+}
+
+.reviews-btn {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  .reviews-btn {
+    margin-top: 64px;
+    justify-content: center;
+    gap: 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .reviews-btn {
+    margin-top: 0;
+  }
+}
+.reviews-btn__button {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(25, 24, 37, 0.1);
+  transition: var(--transition-property);
+}
+@media screen and (min-width: 1024px) {
+  .reviews-btn__button {
+    width: 100px;
+    height: 100px;
+  }
+}
+.reviews-btn__button::before {
+  position: absolute;
+  content: "";
+  border-radius: 100px;
+  border: 2px solid var(--brand-color);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: var(--brand-color);
+  transition: var(--transition-property);
+}
+.reviews-btn__button:hover::before {
+  opacity: 1;
+}
+.reviews-btn__icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  transition: var(--transition-property);
+}
+@media screen and (min-width: 1024px) {
+  .reviews-btn__icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+.explore-btn__button:hover .reviews-btn__icon {
+  fill: #FFFFFF;
 }

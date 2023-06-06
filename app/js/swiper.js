@@ -54,3 +54,56 @@ let myImageSlider = new Swiper('.slide-img', {
 	observeParents: true,
 	observeSlideChildren: true,
 });
+
+
+let myImageSliderRew = new Swiper('.reviews-swiper', {
+	navigation: {
+		nextEl: '.btn-next',
+		prevEl: '.btn-prev'
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		
+		// Буллеты
+		type: 'bullets',
+		clickable: true,
+		// Динамические буллеты
+		dynamicBullets: true,
+		// Кастомные буллеты
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (index + 1) + '</span>';
+		},
+		
+		/*
+		// Фракция
+		type: 'fraction',
+		// Кастомный вывод фракции
+		renderFraction: function (currentClass, totalClass) {
+			return 'Фото <span class="' + currentClass + '"></span>' +
+				' из ' +
+				'<span class="' + totalClass + '"></span>';
+		},
+		*/
+		// Прогрессбар
+		//type: 'progressbar'
+	},
+	slidesPerGroup: 1,
+	slidesPerView: 1,
+	simulateTouch: true,
+	// Чувствительность свайпа
+	touchRatio: 1,
+	// Угол срабатывания свайпа/перетаскивания
+	touchAngle: 45,
+	// Курсор перетаскивания
+	grabCursor: true,
+	spaceBetween: 30,
+	centeredSlides: false,
+	loop: true,
+	speed: 800,
+	effect: 'slide',
+
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+
+});
