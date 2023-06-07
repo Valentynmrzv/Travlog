@@ -1156,6 +1156,7 @@ ul {
   background-image: url(../images/point-bg.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .point::before {
@@ -1337,6 +1338,7 @@ ul {
   background-image: url(../images/features-bg.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .features::before {
@@ -1361,6 +1363,7 @@ ul {
     background-image: url(../images/features-bg.png);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     width: 693px;
     height: 869px;
     margin-left: 0;
