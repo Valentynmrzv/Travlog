@@ -1,8 +1,4 @@
-// const button = document.querySelector(".ащкь__button");
 
-// button.addEventListener("click", () => {
-//   console.log("Button was clicked");
-// });
 document.querySelector(".form__button").addEventListener('click', function () {
     document.querySelector(".form__button").classList.remove('deactivate');
     document.querySelector(".form__button").classList.add('active');
@@ -20,5 +16,5 @@ document.querySelector(".form__button").addEventListener('click', function () {
         document.querySelector(".form__button").classList.remove('deactivate');
         ths.innerHTML = "Subscribe"
     }, 6000)
-    
 });
+
