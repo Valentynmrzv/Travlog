@@ -7,14 +7,13 @@ document.querySelector(".form__button").addEventListener('click', function () {
         ths.innerHTML = "✓"
     }, 700)
     setTimeout(function () {
-        document.querySelector(".form__button").classList.remove('active');
+        // document.querySelector(".form__button").classList.remove('active');
         document.querySelector(".form__button").classList.add('deactivate');
         ths.innerHTML = "Subscribe"
     }, 4700)
     setTimeout(function () {
         document.querySelector(".form__button").classList.remove('active');
         document.querySelector(".form__button").classList.remove('deactivate');
-        ths.innerHTML = "Subscribe"
-    }, 6000)
+    }, 9000)
 });
 

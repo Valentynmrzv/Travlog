@@ -1957,19 +1957,23 @@ ul {
   }
 }
 .deactivate {
-  transition: 0.8s;
-  transform: scale(0.01);
   animation: submob 0.7s 0.5s ease 1;
   animation-fill-mode: forwards;
 }
 @media screen and (min-width: 1024px) {
   .deactivate {
     animation: sub 0.7s 0.5s ease 1;
+    animation-fill-mode: forwards;
   }
 }
 
 @keyframes submob {
   0% {
+    transform: scale(0.01);
+    background-color: var(--brand-color);
+    font-size: 0;
+  }
+  25% {
     transform: scale(0.01);
     background-color: var(--brand-color);
     font-size: 0;
@@ -1992,7 +1996,6 @@ ul {
   0% {
     transform: scale(0.01);
     background-color: var(--brand-color);
-    font-size: 0;
   }
   50% {
     border-radius: 16px;
