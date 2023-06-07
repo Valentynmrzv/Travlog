@@ -1277,7 +1277,7 @@ ul {
     top: -140px;
     left: 284px;
     content: "";
-    background-image: url(../../images/point-icon.png);
+    background-image: url(../images/point-icon.png);
     background-size: cover;
     width: 285px;
     height: 353px;
@@ -1773,4 +1773,187 @@ ul {
 }
 .explore-btn__button:hover .reviews-btn__icon {
   fill: #FFFFFF;
+}
+
+.subscribe-wrapper {
+  padding: 64px 32px;
+  background-color: rgba(250, 205, 73, 0.08);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .subscribe-wrapper {
+    padding: 128px 64px;
+  }
+}
+.subscribe-wrapper__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1875;
+  text-align: center;
+  color: var(--title-text-color);
+}
+@media screen and (min-width: 1024px) {
+  .subscribe-wrapper__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .subscribe-wrapper__title {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.2;
+  }
+}
+.subscribe-wrapper__title::before {
+  content: "subscribe to our newsletter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.1875;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-text-color);
+}
+@media screen and (min-width: 1024px) {
+  .subscribe-wrapper__title::before {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.2173913043;
+  }
+}
+
+.form {
+  margin-top: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .form {
+    flex-direction: row;
+  }
+}
+.form__wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.form__input {
+  padding: 32px 32px 32px 72px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(25, 24, 37, 0.75);
+  transition: var(--transition-property);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2142857143;
+  color: rgba(25, 24, 37, 0.75);
+}
+@media screen and (min-width: 1024px) {
+  .form__input {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.2173913043;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .form__input {
+    width: 805px;
+  }
+}
+.form__input::placeholder {
+  color: rgba(25, 24, 37, 0.75);
+}
+.form__input:hover, .form__input:active, .form__input:focus-visible {
+  outline: none;
+  border: 1px solid var(--brand-color);
+}
+.form__input:hover + .form__icon, .form__input:active + .form__icon, .form__input:focus-visible + .form__icon {
+  fill: var(--brand-color);
+}
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  fill: rgba(25, 24, 37, 0.75);
+}
+.form__button {
+  padding: 24px 64px;
+  background: #5D50C6;
+  border-radius: 16px;
+  width: 100%;
+  color: #FFFFFF;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.1875;
+}
+@media screen and (min-width: 1024px) {
+  .form__button {
+    padding: 32px 64px;
+    width: 235px;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.2173913043;
+  }
+}
+
+.btn-wrapper {
+  width: 100%;
+  height: 68px;
+  text-align: center;
+  position: relative;
+}
+.btn-wrapper div {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(50%, -50%);
+  width: 100%;
+}
+
+.active {
+  transition: 0.8s;
+  transform: scale(0.01);
+  animation: send 0.7s 0.5s ease 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes send {
+  0% {
+    transform: scale(0.01);
+    background-color: transparent;
+    font-size: 0;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(0.01);
+    background-color: transparent;
+    transform: scale(1);
+    box-shadow: unset;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--brand-color);
+    font-size: 30px;
+    width: 90px;
+    height: 90px;
+    padding: 0px;
+    border: 3px solid var(--brand-color);
+  }
+}
+.in-active {
+  background-color: red;
 }
