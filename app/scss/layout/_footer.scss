@@ -5,24 +5,24 @@
         padding-bottom: 64px;
     }
 }
+.description {
+    &__title {
+        margin-top: 32px;
+    }
+    &__text {
+        margin-top: 32px;
+    }
+   
+}
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 $timing : 265ms;
-$iconColor : #00B5F5;
 $accent : #002A8F;
-$bluefade : #0043E0;
-$gradient : #00B5F5;
 
-@mixin transformScale($size: 1) {
-    transform: scale($size);
-    -ms-transform: scale($size);
-    -webkit-transform: scale($size);
-}
 
-body {
-    background-color: rgba($iconColor, 0.05);
-}
+
 .social-icons {
+    margin-top: 64px;
     display: flex;
     gap: 32px;
     padding: 0;
@@ -37,9 +37,8 @@ body {
     i {
         color: #fff;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 8px;
+        left: 9px;
         transition: all $timing ease-out;
     }
 
@@ -47,13 +46,13 @@ body {
         display: block;
 
         &:before {
-            @include transformScale();
+            transform: scale(1);
             content: " ";
             width: 32px;
             height: 32px;
             border-radius: 100%;
             display: block;
-            background: linear-gradient(45deg, $iconColor, $accent);
+            background: var(--brand-color);
             transition: all $timing ease-out;
         }
 
@@ -63,9 +62,9 @@ body {
         }
 
         &:hover i {
-            @include transformScale(2.2);
-            color: $iconColor;
-            background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+            transform: scale(2);
+            color: var(--brand-color);
+            background: -webkit-linear-gradient(45deg, var(--brand-color), $accent);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: all $timing ease-in;

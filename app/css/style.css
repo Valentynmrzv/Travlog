@@ -2100,11 +2100,15 @@ ul {
   padding-bottom: 64px;
 }
 
-body {
-  background-color: rgba(0, 181, 245, 0.05);
+.description__title {
+  margin-top: 32px;
+}
+.description__text {
+  margin-top: 32px;
 }
 
 .social-icons {
+  margin-top: 64px;
   display: flex;
   gap: 32px;
   padding: 0;
@@ -2117,9 +2121,8 @@ body {
 .social-icons i {
   color: #fff;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 8px;
+  left: 9px;
   transition: all 265ms ease-out;
 }
 .social-icons a {
@@ -2127,14 +2130,12 @@ body {
 }
 .social-icons a:before {
   transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
   content: " ";
   width: 32px;
   height: 32px;
   border-radius: 100%;
   display: block;
-  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  background: var(--brand-color);
   transition: all 265ms ease-out;
 }
 .social-icons a:hover:before {
@@ -2142,11 +2143,9 @@ body {
   transition: all 265ms ease-in;
 }
 .social-icons a:hover i {
-  transform: scale(2.2);
-  -ms-transform: scale(2.2);
-  -webkit-transform: scale(2.2);
-  color: #00B5F5;
-  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  transform: scale(2);
+  color: var(--brand-color);
+  background: -webkit-linear-gradient(45deg, var(--brand-color), #002A8F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
