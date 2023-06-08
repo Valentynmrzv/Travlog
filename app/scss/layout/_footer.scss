@@ -139,8 +139,12 @@ $accent : #002A8F;
 
         width: 24px;
         height: 24px;
+        transition: 250ms;
 
         background-color: transparent;
+        &.open-button {
+            transform: rotate(-180deg);
+        }
     }
     &__icon {
         display: block;
@@ -153,6 +157,9 @@ $accent : #002A8F;
         display: none;
 
         .dropdawn.mouse .drop:hover & {
+            display: block;
+        }
+        .dropdawn.touch &.open {
             display: block;
         }
     }

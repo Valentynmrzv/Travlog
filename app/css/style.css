@@ -2221,7 +2221,11 @@ ul {
   padding: 0;
   width: 24px;
   height: 24px;
+  transition: 250ms;
   background-color: transparent;
+}
+.drop__button.open-button {
+  transform: rotate(-180deg);
 }
 .drop__icon {
   display: block;
@@ -2233,6 +2237,9 @@ ul {
   display: none;
 }
 .dropdawn.mouse .drop:hover .drop__list {
+  display: block;
+}
+.dropdawn.touch .drop__list.open {
   display: block;
 }
 .drop__item {
