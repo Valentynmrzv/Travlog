@@ -1,7 +1,4 @@
 .footer {
-    .mouse {
-
-    }
     @media screen and (min-width: 1024px) {
         margin-top: 64px;
     }
@@ -16,15 +13,24 @@
             padding-top: 64px;
             padding-bottom: 64px;
         }
+        @media screen and (min-width: 1440px) {
+            flex-direction: row;
+        }
 
     }
 }
 .description {
+    position: relative;
     &__title {
         margin-top: 32px;
     }
     &__text {
+        @include font-text($fw: 450, $fs: 16px, $lh: 26px);
         margin-top: 32px;
+
+        @media screen and (min-width: 1024px) {
+            @include font-text($fw: 450, $fs: 23px, $lh: 37px); 
+        }
     }
    
 }
@@ -77,6 +83,7 @@ $accent : #002A8F;
             transform: scale(2);
             color: var(--brand-color);
             background: -webkit-linear-gradient(45deg, var(--brand-color), $accent);
+            -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: all $timing ease-in;
@@ -85,6 +92,7 @@ $accent : #002A8F;
 
 }
 // ================================================================================================
+
 .organization {
     display: none;
     @media screen and (min-width: 1024px) {
@@ -97,20 +105,39 @@ $accent : #002A8F;
     &__row {
         display: block;
         width: calc((100% - 64px)/3);
+    }
 
-        .title {
-            @include font-title($fs: 23px, $lh: 28px);
-            color: var(--title-text-color);
-        }
+    &__title {
+        @include font-title($fs: 23px, $lh: 28px);
+        color: var(--title-text-color);
+        transition: 250ms;
 
-        .item {
-            margin-top: 32px;
-            color: var(--tertiary-text-color);
-        }
-        .link {
-            color: var(--tertiary-text-color);
+        .organization__row:hover & {
+            transform: scale(1.2);
         }
     }
+
+    &__item {
+        margin-top: 32px;
+        @include font-text;
+        color: var(--tertiary-text-color);
+        transition: 250ms;
+
+        &:hover {
+            color: var(--brand-color);
+            text-shadow: 1px 9px 5px rgba(93, 80, 198, 0.91);
+        }
+    }
+    &__link {
+        @include font-text;
+        color: var(--tertiary-text-color);
+        transition: 250ms;
+        &:hover {
+            color: var(--brand-color);
+            text-shadow: 1px 9px 5px rgba(93, 80, 198, 0.91);
+        }
+    }
+    
 }
 .dropdawn {
     margin-top: 64px;
@@ -165,10 +192,12 @@ $accent : #002A8F;
     }
     &__item {
         margin-top: 32px;
+        @include font-text;
         color: var(--tertiary-text-color);
     }
 
     &__link {
+        @include font-text;
         color: var(--tertiary-text-color);
     }
 }

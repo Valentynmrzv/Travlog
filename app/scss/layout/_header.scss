@@ -75,36 +75,61 @@
         border-radius: 100px;
         position: relative;
         display: inline-block;
+        overflow: hidden;
     }
     .log-in {
+        padding: 2px;
+        background: none;
+        border: none;
+        border-radius: 100px;
+        color: white;
+        overflow: hidden;
+        // background-color: #FFFFFF;
+        // transition: var(--transition-property);
         
-        background-color: #FFFFFF;
-        transition: var(--transition-property);
 
         &::before {
+            // position: absolute;
+            // content: '';
+            // border-radius: 100px;
+            // border: 2px solid var(--brand-color);
+            // top: 0;
+            // bottom: 0;
+            // right: 0;
+            // height: 100%;
+            // width: 100%;
+            // opacity: 0;
+            // transition: 0.3s ease-out;
+
             position: absolute;
-            content: '';
-            border-radius: 100px;
-            border: 2px solid #FFFFFF;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
+            top: 50%;
+            left: 50%;
+            content: "";
+            // background-image: conic-gradient(transparent 0deg, var(--brand-color) 320deg);
             background-color: var(--brand-color);
-            transition: 0.3s ease-out;
-        
+            height: 150px;
+            width: 150px;
+            transform: translate(-50%, -50%) scale(0) rotate(0deg);
+            border-radius: inherit;
+            transition: transform 2s cubic-bezier(0.3, 1, 0.3, 1);
+            z-index: -1;
         }
         &:hover::before {
-            opacity: 1;
+            transform: translate(-50%, -50%) scale(1) rotate(-360deg);
         }
+ 
         span {
-            position: relative;
             display: inline-block;
+            padding-top: 14px;
+            padding-bottom: 16px;
+            padding-right: 30px;
+            padding-left: 30px;
+            // padding: 14px 30px;
+            border-radius: 100px;
+            background-color: #FFFFFF;
             font-family: var(--primary-font-family);
             color: var(--secondary-text-color);
-            @include font-title($fs: 14px, $lh: 17px);
+            @include font-title($fs: 14px, $lh: 14px);
             transition: 0.2s;
     
         }
@@ -141,9 +166,9 @@
         }
     }
 }
-.log-in:hover span {
-    color: #EEEEEE;
-}
+// .log-in:hover span {
+//     color: var(--primary-title-color);
+// }
 
 .sign-up:hover span {
     color: var(--secondary-text-color);
