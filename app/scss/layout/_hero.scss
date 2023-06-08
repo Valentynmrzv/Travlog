@@ -1,3 +1,29 @@
+.hero {
+    position: relative;
+    overflow-x: clip;
+    &::before {
+        @media screen and (min-width: 1024px) {
+            position: absolute;
+            content: '';
+            bottom: -120px;
+            right: -411px;
+
+            width: 406px;
+            height: 406px;
+
+            background: #FACD49;
+            opacity: 0.5;
+            filter: blur(203px);
+        }
+        @media screen and (min-width: 1440px) {
+            bottom: -200px;
+
+            width: 500px;
+            height: 500px;
+            filter: blur(250px);
+        }
+    }
+}
 .hero-wrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -270,6 +296,8 @@
             background-color: #FF5722;
             top: 291.65px;
             left: 196.6px;
+            box-shadow: 0px 77px 31px rgba(0, 0, 0, 0.01), 0px 43px 26px rgba(0, 0, 0, 0.05), 0px 19px 19px rgba(0, 0, 0, 0.09);
+            border-radius: 50%;
 
             @media screen and (min-width: 1024px) {
                 left: 383px;

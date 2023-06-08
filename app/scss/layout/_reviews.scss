@@ -121,14 +121,20 @@
     }
     &__title {
         margin-top: 64px;
-        @include font-title($fs: 23px, $lh: 28px);
         color: rgba(25, 24, 37, 0.75);
+        @include font-title($fs: 18px, $lh: 24px);
+        @media screen and (min-width: 380px) {
+            @include font-title($fs: 23px, $lh: 28px);
+        }
         @media screen and (min-width: 1024px) {
             margin-top: 56px;
         }
         span {
-            @include font-title($fs: 28px, $lh: 34px);
-            color: #FF5722;
+            color: #FF5722; 
+            @include font-title($fs: 22px, $lh: 28px);
+            @media screen and (min-width: 380px) {
+                @include font-title($fs: 28px, $lh: 34px);
+            }
         }
 
     }

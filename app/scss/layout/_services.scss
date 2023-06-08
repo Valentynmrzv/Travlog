@@ -1,4 +1,5 @@
 .services {
+    overflow-x: clip;
 
     &__wrapper {
         display: flex;
@@ -7,7 +8,6 @@
         padding: 32px 16px;
         min-width: 0;
         @media screen and (min-width: 1440px) {
-            overflow-x: clip;
             flex-direction: row;
         }
         
@@ -61,6 +61,7 @@
         flex-direction: column;
         flex-grow: 0;
         scroll-behavior: smooth;
+        z-index: 2;
 
         @media screen and (min-width: 1024px) {
             flex-direction: row;
@@ -82,10 +83,12 @@
 
 .categories {
     padding: 32px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:32px;
+
     background: var(--primary-bg-color);
     border: 1px solid rgba(25, 24, 37, 0.1);
     border-radius: 32px;

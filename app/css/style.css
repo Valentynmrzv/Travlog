@@ -416,6 +416,32 @@ ul {
   }
 }
 
+.hero {
+  position: relative;
+  overflow-x: clip;
+}
+@media screen and (min-width: 1024px) {
+  .hero::before {
+    position: absolute;
+    content: "";
+    bottom: -120px;
+    right: -411px;
+    width: 406px;
+    height: 406px;
+    background: #FACD49;
+    opacity: 0.5;
+    filter: blur(203px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero::before {
+    bottom: -200px;
+    width: 500px;
+    height: 500px;
+    filter: blur(250px);
+  }
+}
+
 .hero-wrapper {
   display: flex;
   flex-direction: column-reverse;
@@ -687,6 +713,8 @@ ul {
   background-color: #FF5722;
   top: 291.65px;
   left: 196.6px;
+  box-shadow: 0px 77px 31px rgba(0, 0, 0, 0.01), 0px 43px 26px rgba(0, 0, 0, 0.05), 0px 19px 19px rgba(0, 0, 0, 0.09);
+  border-radius: 50%;
 }
 @media screen and (min-width: 1024px) {
   .img-hero__icon.user {
@@ -795,6 +823,9 @@ ul {
   }
 }
 
+.services {
+  overflow-x: clip;
+}
 .services__wrapper {
   display: flex;
   flex-direction: column;
@@ -804,7 +835,6 @@ ul {
 }
 @media screen and (min-width: 1440px) {
   .services__wrapper {
-    overflow-x: clip;
     flex-direction: row;
   }
 }
@@ -848,6 +878,7 @@ ul {
   flex-direction: column;
   flex-grow: 0;
   scroll-behavior: smooth;
+  z-index: 2;
 }
 @media screen and (min-width: 1024px) {
   .services__list {
@@ -1653,10 +1684,17 @@ ul {
 }
 .reviews-list__title {
   margin-top: 64px;
-  font-weight: 700;
-  font-size: 23px;
-  line-height: 1.2173913043;
   color: rgba(25, 24, 37, 0.75);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 380px) {
+  .reviews-list__title {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.2173913043;
+  }
 }
 @media screen and (min-width: 1024px) {
   .reviews-list__title {
@@ -1664,10 +1702,17 @@ ul {
   }
 }
 .reviews-list__title span {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.2142857143;
   color: #FF5722;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2727272727;
+}
+@media screen and (min-width: 380px) {
+  .reviews-list__title span {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2142857143;
+  }
 }
 .reviews-list__text {
   margin-top: 64px;
