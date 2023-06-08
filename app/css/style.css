@@ -1,3 +1,4 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 :root {
   --brand-color: #5D50C6;
   --title-text-color: #191825;
@@ -2090,4 +2091,63 @@ ul {
     color: #FFFFFF;
     border: none;
   }
+}
+.footer {
+  margin-top: 64px;
+}
+.footer__wrapper {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+body {
+  background-color: rgba(0, 181, 245, 0.05);
+}
+
+.social-icons {
+  display: flex;
+  gap: 32px;
+  padding: 0;
+  list-style: none;
+}
+.social-icons li {
+  display: block;
+  position: relative;
+}
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 265ms ease-out;
+}
+.social-icons a {
+  display: block;
+}
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00B5F5;
+  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
 }
