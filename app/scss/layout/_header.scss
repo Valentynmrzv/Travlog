@@ -66,6 +66,7 @@
     
     @media screen and (min-width: 1024px){
         display: flex;
+        gap: 8px;
     }
 
     &__button {
@@ -78,7 +79,7 @@
         overflow: hidden;
     }
     .log-in {
-        padding: 2px;
+        padding: 0;
         background: none;
         border: none;
         border-radius: 100px;
@@ -120,7 +121,7 @@
  
         span {
             display: inline-block;
-            padding-top: 14px;
+            padding-top: 15px;
             padding-bottom: 16px;
             padding-right: 30px;
             padding-left: 30px;
@@ -131,7 +132,6 @@
             color: var(--secondary-text-color);
             @include font-title($fs: 14px, $lh: 14px);
             transition: 0.2s;
-    
         }
     }
     .sign-up {
