@@ -1,8 +1,19 @@
 .footer {
-    margin-top: 64px;
+    @media screen and (min-width: 1024px) {
+        margin-top: 64px;
+    }
+    
     &__wrapper {
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 1024px) {
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
     }
 }
 .description {
@@ -14,13 +25,11 @@
     }
    
 }
+// =========================================social====================================
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 $timing : 265ms;
 $accent : #002A8F;
-
-
-
 .social-icons {
     margin-top: 64px;
     display: flex;
@@ -65,10 +74,90 @@ $accent : #002A8F;
             transform: scale(2);
             color: var(--brand-color);
             background: -webkit-linear-gradient(45deg, var(--brand-color), $accent);
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: all $timing ease-in;
         }
     }
 
+}
+// ================================================================================================
+.organization {
+    display: none;
+    @media screen and (min-width: 1024px) {
+        margin-top: 64px;
+        display: flex;
+        gap: 32px;
+        width: 100%;
+    }
+
+    &__row {
+        display: block;
+        width: calc((100% - 64px)/3);
+
+        .title {
+            @include font-title($fs: 23px, $lh: 28px);
+            color: var(--title-text-color);
+        }
+
+        .item {
+            margin-top: 32px;
+            color: var(--tertiary-text-color);
+        }
+        .link {
+            color: var(--tertiary-text-color);
+        }
+    }
+}
+.dropdawn {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+
+    .drop {
+        position: relative;
+
+        &:hover .list {
+            display: block;
+        }
+        .title {
+            @include font-title($fs: 23px, $lh: 28px);
+            color: var(--title-text-color);
+        }
+        .button {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            border-radius: 50%;
+            border: none;
+            padding: 0;
+
+            width: 24px;
+            height: 24px;
+
+            background-color: transparent;
+        }
+        .icon {
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+
+        .list {
+            transition: all 1s ease-out;
+            display: none;
+        }
+        .item {
+            margin-top: 32px;
+            color: var(--tertiary-text-color);
+        }
+
+        .link {
+            color: var(--tertiary-text-color);
+        }
+    }
 }

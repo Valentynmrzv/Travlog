@@ -4,6 +4,7 @@
   --title-text-color: #191825;
   --primary-text-color: rgba(25, 24, 37, 0.5);
   --secondary-text-color: #222831;
+  --tertiary-text-color: rgba(25, 24, 37, 0.75);
   --accent-text-color: #F85E9F;
   --primary-bg-color: #FFFFFF;
   --primary-font-family: "Circular Std";
@@ -2092,12 +2093,22 @@ ul {
     border: none;
   }
 }
-.footer {
-  margin-top: 64px;
+@media screen and (min-width: 1024px) {
+  .footer {
+    margin-top: 64px;
+  }
 }
 .footer__wrapper {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .footer__wrapper {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 .description__title {
@@ -2146,7 +2157,87 @@ ul {
   transform: scale(2);
   color: var(--brand-color);
   background: -webkit-linear-gradient(45deg, var(--brand-color), #002A8F);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
+}
+
+.organization {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .organization {
+    margin-top: 64px;
+    display: flex;
+    gap: 32px;
+    width: 100%;
+  }
+}
+.organization__row {
+  display: block;
+  width: calc((100% - 64px) / 3);
+}
+.organization__row .title {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.2173913043;
+  color: var(--title-text-color);
+}
+.organization__row .item {
+  margin-top: 32px;
+  color: var(--tertiary-text-color);
+}
+.organization__row .link {
+  color: var(--tertiary-text-color);
+}
+
+.dropdawn {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+@media screen and (min-width: 1024px) {
+  .dropdawn {
+    display: none;
+  }
+}
+.dropdawn .drop {
+  position: relative;
+}
+.dropdawn .drop:hover .list {
+  display: block;
+}
+.dropdawn .drop .title {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.2173913043;
+  color: var(--title-text-color);
+}
+.dropdawn .drop .button {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+.dropdawn .drop .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.dropdawn .drop .list {
+  transition: all 1s ease-out;
+  display: none;
+}
+.dropdawn .drop .item {
+  margin-top: 32px;
+  color: var(--tertiary-text-color);
+}
+.dropdawn .drop .link {
+  color: var(--tertiary-text-color);
 }
