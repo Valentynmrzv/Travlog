@@ -2155,8 +2155,8 @@ ul {
 .social-icons i {
   color: #fff;
   position: absolute;
-  top: 8px;
-  left: 9px;
+  top: 12px;
+  left: 13px;
   transition: all 265ms ease-out;
 }
 .social-icons a {
@@ -2165,8 +2165,8 @@ ul {
 .social-icons a:before {
   transform: scale(1);
   content: " ";
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   display: block;
   background: var(--brand-color);
