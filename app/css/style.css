@@ -2202,19 +2202,17 @@ ul {
     display: none;
   }
 }
-.dropdawn .drop {
+
+.drop {
   position: relative;
 }
-.dropdawn .drop:hover .list {
-  display: block;
-}
-.dropdawn .drop .title {
+.drop__title {
   font-weight: 700;
   font-size: 23px;
   line-height: 1.2173913043;
   color: var(--title-text-color);
 }
-.dropdawn .drop .button {
+.drop__button {
   position: absolute;
   top: 2px;
   right: 0;
@@ -2225,19 +2223,22 @@ ul {
   height: 24px;
   background-color: transparent;
 }
-.dropdawn .drop .icon {
+.drop__icon {
   display: block;
   width: 24px;
   height: 24px;
 }
-.dropdawn .drop .list {
+.drop__list {
   transition: all 1s ease-out;
   display: none;
 }
-.dropdawn .drop .item {
+.dropdawn.mouse .drop:hover .drop__list {
+  display: block;
+}
+.drop__item {
   margin-top: 32px;
   color: var(--tertiary-text-color);
 }
-.dropdawn .drop .link {
+.drop__link {
   color: var(--tertiary-text-color);
 }

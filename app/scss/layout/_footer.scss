@@ -1,4 +1,7 @@
 .footer {
+    .mouse {
+
+    }
     @media screen and (min-width: 1024px) {
         margin-top: 64px;
     }
@@ -117,47 +120,48 @@ $accent : #002A8F;
     @media screen and (min-width: 1024px) {
         display: none;
     }
+}
 
-    .drop {
-        position: relative;
+.drop {
+    position: relative;
 
-        &:hover .list {
+    &__title {
+        @include font-title($fs: 23px, $lh: 28px);
+        color: var(--title-text-color);
+    }
+    &__button {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+
+        width: 24px;
+        height: 24px;
+
+        background-color: transparent;
+    }
+    &__icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__list {
+        transition: all 1s ease-out;
+        display: none;
+
+        .dropdawn.mouse .drop:hover & {
             display: block;
         }
-        .title {
-            @include font-title($fs: 23px, $lh: 28px);
-            color: var(--title-text-color);
-        }
-        .button {
-            position: absolute;
-            top: 2px;
-            right: 0;
-            border-radius: 50%;
-            border: none;
-            padding: 0;
+    }
+    &__item {
+        margin-top: 32px;
+        color: var(--tertiary-text-color);
+    }
 
-            width: 24px;
-            height: 24px;
-
-            background-color: transparent;
-        }
-        .icon {
-            display: block;
-            width: 24px;
-            height: 24px;
-        }
-
-        .list {
-            transition: all 1s ease-out;
-            display: none;
-        }
-        .item {
-            margin-top: 32px;
-            color: var(--tertiary-text-color);
-        }
-
-        .link {
-            color: var(--tertiary-text-color);
-        }
+    &__link {
+        color: var(--tertiary-text-color);
     }
 }
