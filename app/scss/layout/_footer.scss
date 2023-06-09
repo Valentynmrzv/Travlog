@@ -55,8 +55,9 @@ $accent : #002A8F;
     i {
         color: #fff;
         position: absolute;
-        top: 9px;
-        left: 11px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         transition: all $timing ease-out;
         font-size: 23px;
         // font: normal normal normal 14px/1.1 FontAwesome;
@@ -66,7 +67,7 @@ $accent : #002A8F;
         display: block;
 
         &:before {
-            transform: scale(1);
+            transform: scale(1) translate(-25%, -25%);
             content: " ";
             width: 40px;
             height: 40px;
@@ -77,12 +78,12 @@ $accent : #002A8F;
         }
 
         &:hover:before {
-            transform: scale(0);
+            transform: scale(0) translate(-25%, -25%);
             transition: all $timing ease-in;
         }
 
         &:hover i {
-            transform: scale(2);
+            transform: scale(2) translate(-25%, -25%);
             color: var(--brand-color);
             background: -webkit-linear-gradient(45deg, var(--brand-color), $accent);
             -webkit-background-clip: text;
