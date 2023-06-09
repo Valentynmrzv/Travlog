@@ -321,12 +321,19 @@
         width: 85.21px;
         height: 28.75px;
         background-color: var(--primary-bg-color);
-        box-shadow: 0px 39.526px 15.913px rgba(0, 0, 0, 0.01), 0px 22.0729px 13.3464px rgba(0, 0, 0, 0.05);
         border-radius: 51.3324px;
 
         color: #393E46;
         @include font-title($fs: 7px, $lh: 8px);
         font-family: var(--primary-font-family);
+        transition: var(--transition-property);
+        animation: swing 6s infinite;
+        animation-timing-function: ease-in-out;
+        &:hover {
+            animation: none;
+            box-shadow: 0px 39.526px 15.913px rgba(0, 0, 0, 0.01), 0px 22.0729px 13.3464px rgba(0, 0, 0, 0.05);
+
+        }
 
         @media screen and (min-width: 1024px) {
             width: 166px;
@@ -337,6 +344,38 @@
             gap: 6px;
             @include font-title($fs: 14px, $lh: 17px);
         }
+    }
+}
+@keyframes swing {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 100% 50%;
+    }
+
+    10% {
+        transform: rotate(2deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+
+    80% {
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        transform: rotate(2deg);
     }
 }
 .img-hero__link-icon {

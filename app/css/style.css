@@ -419,6 +419,9 @@ input[type=password] {
   font-family: var(--primary-font-family);
   color: var(--title-text-color);
 }
+.logo:hover {
+  color: var(--title-text-color);
+}
 
 @keyframes rotate {
   0% {
@@ -797,7 +800,6 @@ input[type=password] {
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
-
 .expand {
   display: flex;
   justify-content: center;
@@ -853,6 +855,9 @@ input[type=password] {
   transition: all 0.2s 0.7s, font-size 0.1s;
   z-index: 11;
 }
+.menu-text-expand:hover {
+  color: #000000;
+}
 
 .menu-login {
   font-weight: 700;
@@ -864,10 +869,6 @@ input[type=password] {
   background-color: var(--primary-bg-color);
 }
 
-.menu-login-active,
-.menu-signin-active {
-  transition: var(--transition-property);
-}
 .menu-login-active:active,
 .menu-signin-active:active {
   -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
@@ -1194,13 +1195,19 @@ input[type=password] {
   width: 85.21px;
   height: 28.75px;
   background-color: var(--primary-bg-color);
-  box-shadow: 0px 39.526px 15.913px rgba(0, 0, 0, 0.01), 0px 22.0729px 13.3464px rgba(0, 0, 0, 0.05);
   border-radius: 51.3324px;
   color: #393E46;
   font-weight: 700;
   font-size: 7px;
   line-height: 1.1428571429;
   font-family: var(--primary-font-family);
+  transition: var(--transition-property);
+  animation: swing 6s infinite;
+  animation-timing-function: ease-in-out;
+}
+.img-hero__link:hover {
+  animation: none;
+  box-shadow: 0px 39.526px 15.913px rgba(0, 0, 0, 0.01), 0px 22.0729px 13.3464px rgba(0, 0, 0, 0.05);
 }
 @media screen and (min-width: 1024px) {
   .img-hero__link {
@@ -1216,6 +1223,27 @@ input[type=password] {
   }
 }
 
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 100% 50%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%, 40%, 60% {
+    transform: rotate(-4deg);
+  }
+  30%, 50%, 70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
 .img-hero__link-icon {
   width: 12px;
   height: 12px;

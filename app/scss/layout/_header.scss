@@ -332,6 +332,9 @@
     padding: 10px 0;
     -webkit-transition: 0.1s;
     transition: 0.1s;
+    &:hover {
+
+    }
 }
 
 .expand {
@@ -388,6 +391,9 @@
     -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
     transition: all 0.2s 0.7s, font-size 0.1s;
     z-index: 11;
+    &:hover {
+        color: #000000
+    }
 }
 .menu-login {
     // padding-left: 10px;
@@ -402,7 +408,6 @@
 }
 .menu-login-active,
 .menu-signin-active {
-    transition: var(--transition-property);
     &:active {
             -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);

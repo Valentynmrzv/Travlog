@@ -7,11 +7,9 @@
     
     color: var(--title-text-color);
 
-    // &__icon {
-    //     width: 40px;
-    //     height: 40px;
-    //     animation: 10s linear 0s normal none infinite running rotate;
-    // }
+    &:hover {
+        color: var(--title-text-color);
+    }
 }
 @keyframes rotate {
     0% {
