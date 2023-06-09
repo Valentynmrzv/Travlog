@@ -11,6 +11,7 @@
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -67,23 +68,45 @@
 
             <ul class="login">
                 <li class="login__item">
-                    <button class="login__button log-in">
+                    <button class="login__button log-in" role="button" data-toggle="modal"
+                data-target="#login-modal">
                         <span>Log In</span>
                     </button>
                 </li>
                 <li class="login__item">
-                    <button class="login__button sign-up">
+                    <button class="login__button sign-up" role="button" data-toggle="modal"
+                data-target="#login-modal">
                         <span>Sign Up</span>
                     </button>
                 </li>
             </ul>
-
-            <button class="mobile-menu">
+            <div class="menu-wrapper"> 
+                <button class="menu-wrapper__button"></button>
+                <ul class="menu">
+                    <div class="menu-close fa fa-close"></div>
+                    <li class="menu-global menu-top"><a href="" class="menu-text">
+                        Special Deals
+                    </a></li>
+                    <li class="menu-global menu-middle"><a href="" class="menu-text">
+                        Contact
+                    </a></li>
+                    <li class="menu-global menu-bottom">
+                        <button class="menu-text menu-login menu-login-active">
+                            Log In
+                        </button>
+                        <button class="menu-text menu-login menu-signin-active">
+                            Sign Up
+                        </button>
+                </li>
+                </ul>
+            </div>
+            <!-- <button class="mobile-menu">
                 <svg class="mobile-menu__icon">
                     <use href="./images/sprite.svg#icon-menu-mobil2"></use>
-                <!-- <use href="./images/sprite.svg#icon-mobile-menu"></use> -->
                 </svg>
-            </button>
+            </button> -->
         </div>
+        
+        
     </header>
     <main>

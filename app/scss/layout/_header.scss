@@ -4,6 +4,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     &::before {
@@ -26,6 +27,9 @@
         @media screen and (min-width: 1440px) {
             display: none;
         }
+    }
+    &::after {
+        display: none;
     }
     
 
@@ -211,3 +215,197 @@
     }
 }
 
+// ===========================mobil=============================================
+.menu-wrapper {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--brand-color);
+    @media screen and (min-width: 1024px) {
+        order: -1;
+    }
+
+    @media screen and (min-width: 1440px) {
+        display: none;
+    }
+    &__button {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        z-index: 10;
+        border: 0;
+        background-color: transparent;
+    }
+}
+.menu {
+    z-index: 1;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    text-align: right;
+    margin: 5px;
+    margin-top: 7.5px;
+    
+    
+    span {
+            display: inline-block;
+            vertical-align: middle;
+            color: rgb(9, 9, 9);
+        }
+    
+        ul {
+            display: block;
+            list-style-type: none;
+            text-align: right;
+        }
+    
+}
+
+.menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    font-size: 0em;
+    opacity: 0;
+    text-align: center;
+    font-weight: bold;
+
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.menu-close-visible {
+    top: -3px;
+    right: 4px;
+    font-size: 2em;
+    opacity: 1;
+
+    -webkit-transition: 0.2s 0.4s;
+    transition: 0.2s 0.4s;
+}
+
+.menu-global {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--primary-bg-color);
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    @media screen and (min-width: 1024px) {
+        left: 0;
+    }
+}
+
+// .menu-global:hover {
+//     right: 10px;
+//     -webkit-transition: all 0.2s;
+//     transition: all 0.2s;
+// }
+
+.menu-top {
+    top: 0px;
+}
+
+.menu-middle {
+    top: 10px;
+}
+
+.menu-bottom {
+    top: 20px;
+}
+
+.menu-text {
+    opacity: 0;
+    font-size: 0em;
+    padding: 10px 0;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.expand {
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) -2.5px 5px 7.5px, rgba(0, 0, 0, 0.1) 2.5px 5px 7.5px;
+    width: 270px;
+    height: 50px;
+    padding: 5px;
+    z-index: 4;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.menu-top-expand {
+    top: 50px;
+    background: #6f63cc;
+
+    -webkit-transition: all 0.5s 0.2s, left 0.1s;
+    transition: all 0.5s 0.2s, left 0.1s;
+}
+
+.menu-middle-expand {
+    top: 100px;
+    background: #8176d3;
+
+    -webkit-transition: all 0.5s 0.1s, left 0.1s;
+    transition: all 0.5s 0.1s, left 0.1s;
+}
+
+.menu-bottom-expand {
+    justify-content: space-between;
+    top: 150px;
+    height: 60px;
+    background: #928ad9;
+    z-index: 12;
+
+    -webkit-transition: all 0.5s, left 0.1s;
+    transition: all 0.5s, left 0.1s;
+    @media screen and (min-width: 1024px) { 
+        display: none;
+    }
+}
+
+.menu-text-expand {
+    color: #000000;
+    opacity: 0.8;
+    padding: 10px;
+    text-align: center;
+    font-family: var(--primary-font-family);
+    @include font-title($fw: 700, $fs: 28px, $lh: 24px);
+    -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
+    transition: all 0.2s 0.7s, font-size 0.1s;
+    z-index: 11;
+}
+.menu-login {
+    // padding-left: 10px;
+    // padding-right: 10px;
+    @include font-title($fw: 700, $fs: 22px, $lh: 24px);
+    z-index: 2;
+    border-radius: 100px;
+    border: 2px solid var(--brand-color);
+    background-color: var(--primary-bg-color);
+    
+    
+}
+.menu-login-active,
+.menu-signin-active {
+    transition: var(--transition-property);
+    &:active {
+            -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+        }
+}

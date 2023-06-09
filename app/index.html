@@ -11,6 +11,7 @@
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -67,24 +68,46 @@
 
             <ul class="login">
                 <li class="login__item">
-                    <button class="login__button log-in">
+                    <button class="login__button log-in" role="button" data-toggle="modal"
+                data-target="#login-modal">
                         <span>Log In</span>
                     </button>
                 </li>
                 <li class="login__item">
-                    <button class="login__button sign-up">
+                    <button class="login__button sign-up" role="button" data-toggle="modal"
+                data-target="#login-modal">
                         <span>Sign Up</span>
                     </button>
                 </li>
             </ul>
-
-            <button class="mobile-menu">
+            <div class="menu-wrapper"> 
+                <button class="menu-wrapper__button"></button>
+                <ul class="menu">
+                    <div class="menu-close fa fa-close"></div>
+                    <li class="menu-global menu-top"><a href="" class="menu-text">
+                        Special Deals
+                    </a></li>
+                    <li class="menu-global menu-middle"><a href="" class="menu-text">
+                        Contact
+                    </a></li>
+                    <li class="menu-global menu-bottom">
+                        <button class="menu-text menu-login menu-login-active">
+                            Log In
+                        </button>
+                        <button class="menu-text menu-login menu-signin-active">
+                            Sign Up
+                        </button>
+                </li>
+                </ul>
+            </div>
+            <!-- <button class="mobile-menu">
                 <svg class="mobile-menu__icon">
                     <use href="./images/sprite.svg#icon-menu-mobil2"></use>
-                <!-- <use href="./images/sprite.svg#icon-mobile-menu"></use> -->
                 </svg>
-            </button>
+            </button> -->
         </div>
+        
+        
     </header>
     <main>
 
@@ -1222,7 +1245,7 @@
                     </li>
 
 
-                    <li class="item">
+                    <li class="drop__item">
 
 
                         <a href="mailto:info@travlog.com" class="drop__link">info@travlog.com</a>
@@ -1255,10 +1278,370 @@
     </div>
 
 
-
-
-
 </footer>
+
+
+<!-- -----------------------------------MODAL------------------------------------ -->
+
+
+<!-- BEGIN # MODAL LOGIN -->
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+
+
+    style="display: none;">
+
+
+    <div class="modal-dialog">
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-header" align="center">Travl
+
+
+                <div class="loader-img">
+
+
+                    <svg class="clouds" viewBox="0 0 263 120">
+
+
+                        <path fill="#fff"
+
+
+                            d="M69.31 78.38a10.89 10.89 0 0 0-2.54.3 16.18 16.18 0 0 0-19.1-12.61c-.36.08-.73.16-1.1.27a18.09 18.09 0 0 0-34.15 5.9 13.91 13.91 0 0 0 1.5 27.74h55.4v-.07a10.78 10.78 0 1 0 0-21.53zm0 18.3H13.94a10.62 10.62 0 0 1 0-21.23h1.65v-1.62a14.79 14.79 0 0 1 28.55-4.85l.6 1.52 1.53-.6a12.64 12.64 0 0 1 4.66-.87 12.94 12.94 0 0 1 12.83 12.05l.11 2.44 2.2-1.05a7.47 7.47 0 1 1 3.24 14.2z" />
+
+
+                        <path fill="#fff"
+
+
+                            d="M186.9 80.55a12.94 12.94 0 0 0-14.8-12.35 15.58 15.58 0 0 0-29.55-4.85 12.46 12.46 0 0 0-17.12 11.52v.7a12.44 12.44 0 0 0 3.37 24.4h53.6l.09-.01a10.24 10.24 0 0 0 4.4-19.41zm-4.4 15.98h-53.6a9.14 9.14 0 0 1-1.34-18.18l1.61-.25-.3-1.61a9.04 9.04 0 0 1 13.67-9.4l1.75 1.05.68-2.23a12.3 12.3 0 0 1 23.94 3.94v2.37l2.17-.68a9.46 9.46 0 0 1 2.9-.46 9.7 9.7 0 0 1 9.6 9.7v.59l-.08 1.25 1.2.4a6.94 6.94 0 0 1-2.2 13.5z" />
+
+
+                        <path fill="#fff"
+
+
+                            d="M67.24 65.44h55.4v-.04a10.78 10.78 0 0 0 0-21.53 11.6 11.6 0 0 0-2.57.28 16.18 16.18 0 0 0-19.09-12.62q-.56.12-1.1.27a18.09 18.09 0 0 0-34.16 5.9 13.91 13.91 0 0 0 1.52 27.74zm.02-24.52l1.6-.01v-1.63a14.8 14.8 0 0 1 28.54-4.85l.6 1.52 1.52-.58a12.82 12.82 0 0 1 17.5 11.18l.17 2.42 2.2-1.05a7.47 7.47 0 1 1 3.23 14.22H67.26a10.62 10.62 0 1 1 0-21.23z" />
+
+
+                        <path fill="#fff"
+
+
+                            d="M257.24 46.02a12.94 12.94 0 0 0-13.38-12.5 12.77 12.77 0 0 0-1.42.14 15.6 15.6 0 0 0-29.52-4.85 12.43 12.43 0 0 0-17.12 11.52v.7a12.43 12.43 0 0 0 3.32 24.4h53.72a10.23 10.23 0 0 0 4.4-19.4zM252.75 62h-53.6a9.16 9.16 0 0 1-1.33-18.2l1.7-.25-.32-1.62a9.16 9.16 0 0 1 8.96-10.76 9.3 9.3 0 0 1 4.7 1.36l1.7 1 .65-1.95a12.3 12.3 0 0 1 23.95 3.78v2.38l2.2-.68a9.61 9.61 0 0 1 12.5 9.18v.58l-.09 1.24 1.2.4A6.94 6.94 0 0 1 252.75 62z" />
+
+
+                    </svg>
+
+
+                    <svg class="plane" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+
+
+                        <path fill="#5D50C6"
+
+
+                            d="M106.5 80H30.88c-3.96-.42-7.33-3.02-10.05-7.73a60.2 60.2 0 0 1-5.5-15.48l-1.83-7.92h16.3l1.67 1.2c2 1.42 3.8 3.12 5.34 5.03.56.66 1.17 1.27 1.83 1.84h2.75L35.16 40h22l16.63 16.94h13.86l.72.16c7.72 1.84 11.53 3.98 13.2 7.63a58.95 58.95 0 0 1 2.51 6.95L106.5 80z" />
+
+
+                        <path fill="#FFF"
+
+
+                            d="M100.32 75.42H31.36c-2.44-.26-4.58-2.03-6.56-5.5a56.83 56.83 0 0 1-4.96-14.25l-.55-2.27h9l.48.35a22.56 22.56 0 0 1 4.42 4.16 24.93 24.93 0 0 0 3.67 3.67h11l-6.2-16.96h13.48l16.63 16.94h15.48c5.98 1.37 9.17 2.93 10.07 5.08.89 2.08 1.65 4.2 2.29 6.38l.71 2.4zm-68.65-3.67h63.66c-.39-1.2-.84-2.4-1.37-3.55 0 0-.72-1.43-7.34-2.97H70.23L53.6 48.28H47l6.22 16.95h-17.5l-.5-.39a28.36 28.36 0 0 1-4.81-4.6 18.11 18.11 0 0 0-3.23-3.16h-3.14c.9 3.82 2.24 7.51 4 11 1.21 2.2 2.46 3.5 3.63 3.67z" />
+
+
+                    </svg>
+
+
+                </div>g
+
+
+                <button type="button" class="close modal-button-close" data-dismiss="modal" aria-label="Close">
+
+
+                    <svg class="modal-button-close__icon">
+
+
+                        <use href="./images/sprite.svg#icon-close"></use>
+
+
+                    </svg>
+
+
+                </button>
+
+
+            </div>
+
+
+
+
+
+            <!-- Begin # DIV Form -->
+
+
+            <div id="div-forms">
+
+
+
+
+
+                <!-- Begin # Login Form -->
+
+
+                <form id="login-form">
+
+
+                    <div class="modal-body">
+
+
+                        <div id="div-login-msg">
+
+
+                            <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+
+
+                            <span id="text-login-msg" class="text-span">Type your username and password.</span>
+
+
+                        </div>
+
+
+                        <input id="login_username" class="form-control" type="text"
+
+
+                            placeholder="Username (type ERROR for error effect)" required>
+
+
+                        <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+
+
+                        <div class="checkbox">
+
+
+                            <label>
+
+
+                                <input type="checkbox" class="checkbox-form"> Remember me
+
+
+                            </label>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="modal-footer">
+
+
+                        <div>
+
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+
+
+                        </div>
+
+
+                        <div class="modal-footer-space-between">
+
+
+                            <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+
+
+                            <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+
+                <!-- End # Login Form -->
+
+
+
+
+
+                <!-- Begin | Lost Password Form -->
+
+
+                <form id="lost-form" style="display:none;">
+
+
+                    <div class="modal-body">
+
+
+                        <div id="div-lost-msg">
+
+
+                            <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+
+
+                            <span id="text-lost-msg">Type your e-mail.</span>
+
+
+                        </div>
+
+
+                        <input id="lost_email" class="form-control" type="text"
+
+
+                            placeholder="E-Mail (type ERROR for error effect)" required>
+
+
+                    </div>
+
+
+                    <div class="modal-footer">
+
+
+                        <div>
+
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+
+
+                        </div>
+
+
+                        <div class="modal-footer-space-between">
+
+
+                            <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+
+
+                            <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+
+                <!-- End | Lost Password Form -->
+
+
+
+
+
+                <!-- Begin | Register Form -->
+
+
+                <form id="register-form" style="display:none;">
+
+
+                    <div class="modal-body">
+
+
+                        <div id="div-register-msg">
+
+
+                            <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+
+
+                            <span id="text-register-msg">Register an account.</span>
+
+
+                        </div>
+
+
+                        <input id="register_username" class="form-control" type="text"
+
+
+                            placeholder="Username (type ERROR for error effect)" required>
+
+
+                        <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+
+
+                        <input id="register_password" class="form-control" type="password" placeholder="Password"
+
+
+                            required>
+
+
+                    </div>
+
+
+                    <div class="modal-footer">
+
+
+                        <div>
+
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+
+
+                        </div>
+
+
+                        <div class="modal-footer-space-between">
+
+
+                            <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+
+
+                            <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+
+                <!-- End | Register Form -->
+
+
+
+
+
+            </div>
+
+
+            <!-- End # DIV Form -->
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- END # MODAL LOGIN -->
+
+
+
+
+
+<!------------------------------------- MODAL END------------------------------------- -->
+
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
 
 <script src="js/main.min.js"></script>
