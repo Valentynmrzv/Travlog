@@ -37,8 +37,6 @@
 // =========================================social====================================
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-$timing : 265ms;
-$accent : #002A8F;
 .social-icons {
     margin-top: 64px;
     display: flex;
@@ -46,53 +44,83 @@ $accent : #002A8F;
     padding: 0;
     list-style: none;
 
-    li {
+    &__item {
         display: block;
         position: relative;
 
     }
-
-    i {
-        color: #fff;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: all $timing ease-out;
-        font-size: 23px;
-        // font: normal normal normal 14px/1.1 FontAwesome;
-    }
-
-    a {
+    &__link {
         display: block;
 
         &:before {
-            transform: scale(1) translate(-25%, -25%);
+            transform: scale(1) translate(0%, 0%);
             content: " ";
             width: 40px;
             height: 40px;
             border-radius: 100%;
             display: block;
             background: var(--brand-color);
-            transition: all $timing ease-out;
+            transition: all 265ms ease-out;
         }
 
         &:hover:before {
-            transform: scale(0) translate(-25%, -25%);
-            transition: all $timing ease-in;
-        }
-
-        &:hover i {
-            transform: scale(2) translate(-25%, -25%);
-            color: var(--brand-color);
-            background: -webkit-linear-gradient(45deg, var(--brand-color), $accent);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all $timing ease-in;
+            transform: scale(0) translate(0%, 0%);
+            transition: all 265ms ease-in;
         }
     }
 
+    &__icon {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 265ms ease-out;
+        font-size: 19px;
+
+        
+        .social-icons__link:hover & {
+            transform: scale(2) translate(-25%, -25%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 265ms ease-in;
+
+            &.fa-facebook {
+                color: transparent;
+                background: linear-gradient(18deg, rgba(59, 89, 152, 1) 0%, rgba(59, 89, 152, 1) 100%);
+                background: -webkit-linear-gradient(18deg, rgba(59, 89, 152, 1) 0%, rgba(59, 89, 152, 1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        
+            &.fa-linkedin {
+                color: transparent;
+                background: linear-gradient(18deg, rgba(14, 118, 168, 1) 0%, rgba(14, 118, 168, 1) 100%);
+                background: -webkit-linear-gradient(18deg, rgba(14, 118, 168, 1) 0%, rgba(14, 118, 168, 1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+
+            }
+        
+            &.fa-instagram {
+                color: transparent;
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        
+            &.fa-twitter {
+                color: transparent;
+                background: linear-gradient(18deg, rgba(0, 172, 238, 1) 0%, rgba(0, 172, 238, 1) 100%);
+                background: -webkit-linear-gradient(18deg, rgba(0, 172, 238, 1) 0%, rgba(0, 172, 238, 1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        }
+
+    }
 }
 // ================================================================================================
 

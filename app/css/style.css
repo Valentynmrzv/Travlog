@@ -2601,24 +2601,15 @@ input[type=password] {
   padding: 0;
   list-style: none;
 }
-.social-icons li {
+.social-icons__item {
   display: block;
   position: relative;
 }
-.social-icons i {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 265ms ease-out;
-  font-size: 23px;
-}
-.social-icons a {
+.social-icons__link {
   display: block;
 }
-.social-icons a:before {
-  transform: scale(1) translate(-25%, -25%);
+.social-icons__link:before {
+  transform: scale(1) translate(0%, 0%);
   content: " ";
   width: 40px;
   height: 40px;
@@ -2627,18 +2618,53 @@ input[type=password] {
   background: var(--brand-color);
   transition: all 265ms ease-out;
 }
-.social-icons a:hover:before {
-  transform: scale(0) translate(-25%, -25%);
+.social-icons__link:hover:before {
+  transform: scale(0) translate(0%, 0%);
   transition: all 265ms ease-in;
 }
-.social-icons a:hover i {
+.social-icons__icon {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 265ms ease-out;
+  font-size: 19px;
+}
+.social-icons__link:hover .social-icons__icon {
   transform: scale(2) translate(-25%, -25%);
-  color: var(--brand-color);
-  background: -webkit-linear-gradient(45deg, var(--brand-color), #002A8F);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
+}
+.social-icons__link:hover .social-icons__icon.fa-facebook {
+  color: transparent;
+  background: linear-gradient(18deg, rgb(59, 89, 152) 0%, rgb(59, 89, 152) 100%);
+  background: -webkit-linear-gradient(18deg, rgb(59, 89, 152) 0%, rgb(59, 89, 152) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.social-icons__link:hover .social-icons__icon.fa-linkedin {
+  color: transparent;
+  background: linear-gradient(18deg, rgb(14, 118, 168) 0%, rgb(14, 118, 168) 100%);
+  background: -webkit-linear-gradient(18deg, rgb(14, 118, 168) 0%, rgb(14, 118, 168) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.social-icons__link:hover .social-icons__icon.fa-instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.social-icons__link:hover .social-icons__icon.fa-twitter {
+  color: transparent;
+  background: linear-gradient(18deg, rgb(0, 172, 238) 0%, rgb(0, 172, 238) 100%);
+  background: -webkit-linear-gradient(18deg, rgb(0, 172, 238) 0%, rgb(0, 172, 238) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .organization {
