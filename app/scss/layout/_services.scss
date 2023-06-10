@@ -2,37 +2,27 @@
     overflow-x: clip;
 
     &__wrapper {
+        padding: 32px 16px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 32px 16px;
+        
         min-width: 0;
         @media screen and (min-width: 1440px) {
             flex-direction: row;
         }
-        
-
     }
-    // &__text {
-    //     text-align: center;
-    //     letter-spacing: 0.2em;
-    //     text-transform: uppercase;
-    //     color: var(--accent-text-color);
-    //     @include font-title($fs: 16px, $lh: 19px);
-    //     @media screen and (min-width: 1440px) {
-    //         text-align: start;
-    //     }
-        
-    // }
     &__title {
-        text-align: center;
-        @include font-title($fs: 32px, $lh: 38px);
-        color: var(--title-text-color);
-
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
+
+        text-align: center;
+        @include font-title($fs: 32px, $lh: 38px);
+        color: var(--title-text-color);
+
         @media screen and (min-width: 1440px) {
             text-align: start;
             width: 336px;
@@ -41,25 +31,25 @@
 
         &::before {
             content: 'Services';
-            text-align: center;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--accent-text-color);
-            @include font-title($fs: 16px, $lh: 19px);
 
+            text-align: center;
+            text-transform: uppercase;
+            @include font-title($fs: 16px, $lh: 19px);
+            letter-spacing: 0.2em;
+            color: var(--accent-text-color);
+            
             @media screen and (min-width: 1440px) {
                 text-align: start;
             }
         }
     }
-    
-
     &__list {
         margin-top: 32px;
-        gap: 16px;
         display: flex;
         flex-direction: column;
         flex-grow: 0;
+        gap: 16px;
+        
         scroll-behavior: smooth;
         z-index: 2;
 
@@ -73,14 +63,12 @@
         }
     }
 }
-
 .text-wrapper {
     @media screen and (min-width: 1440px) {
-        flex-grow: 1;
         margin-right: 40px;
+        flex-grow: 1;
     }
 }
-
 .categories {
     padding: 32px;
 
@@ -92,6 +80,7 @@
     background: var(--primary-bg-color);
     border: 1px solid rgba(25, 24, 37, 0.1);
     border-radius: 32px;
+
     transition: 500ms;
     @media screen and (min-width: 1024px) {
         padding: 64px;
@@ -107,22 +96,21 @@
 
     &__img {
         width: 64px;
+
         @media screen and (min-width: 1024px) {
             margin-bottom: 32px;
         }
     }
 
     &__title {
+        text-align: center;
+
         @include font-title($fs: 24px, $lh: 29px);
         color: var(--title-text-color);
-        text-align: center;
     }
     &__text {
         text-align: center;
     }
-
-
-
 }
 
 
@@ -130,11 +118,11 @@
 .explore {
     margin-top: 32px;
     margin-bottom: 32px;
+
     display: flex;
     flex-direction: column;
 
     min-width: 0;
-    // overflow-x: clip;
     @media screen and (min-width: 1024px) {
         margin-top: 64px;
         margin-bottom: 64px;
@@ -150,28 +138,18 @@
     }
 }
 .explore-title {
-    // &__text {
-    //     @include font-title($fs: 16px, $lh: 19px);
-    //     color: var(--accent-text-color);
-    //     letter-spacing: 0.2em;
-    //     text-transform: uppercase;
-    //     text-align: center;
-    //     @media screen and (min-width: 1024px) {
-    //         @include font-title($fs: 23px, $lh: 28px);
-    //     }
-    //     @media screen and (min-width: 1440px) {
-    //         text-align: start;
-    //     }
-    // }
     &__title {
         margin-top: 16px;
-        @include font-title($fs: 32px, $lh: 38px);
-        color: var(--title-text-color);
-        text-align: center;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
+
+        text-align: center;
+        @include font-title($fs: 32px, $lh: 38px);
+        color: var(--title-text-color);
+        
         @media screen and (min-width: 1024px) {
             @include font-title($fs: 40px, $lh: 48px);
         }
@@ -182,16 +160,16 @@
         }
         &::before {
             content: 'Top Destination';
+
+            text-transform: uppercase;
+            text-align: center;
             @include font-title($fs: 16px, $lh: 19px);
             color: var(--accent-text-color);
             letter-spacing: 0.2em;
-            text-transform: uppercase;
-            text-align: center;
         
             @media screen and (min-width: 1024px) {
                 @include font-title($fs: 23px, $lh: 28px);
             }
-        
         }
     }
 }
@@ -209,11 +187,14 @@
     }
     &__button {
         position: relative;
+
         width: 64px;
         height: 64px;
+
         background-color: transparent;
         border-radius: 50%;
         border: 1px solid rgba(25, 24, 37, 0.1);
+
         transition: var(--transition-property);
         @media screen and (min-width: 1024px) {
             width: 100px;
@@ -221,121 +202,122 @@
         }
         
         &::before {
-            position: absolute;
             content: '';
-            border-radius: 100px;
-            border: 2px solid var(--brand-color);
+
+            position: absolute;
             top: 0;
-            bottom: 0;
             right: 0;
+
             height: 100%;
             width: 100%;
             opacity: 0;
 
+            border-radius: 100px;
+            border: 2px solid var(--brand-color);
+            
             background-color: var(--brand-color);
             transition: var(--transition-property);
         }
-
         &:hover::before {
             opacity: 1;
-
         }
     }
-    
     &__icon {
-        width: 20px;
-        height: 20px;
         position: relative;
         display: inline-block;
+
+        width: 20px;
+        height: 20px;
+        
         transition: var(--transition-property);
+
         @media screen and (min-width: 1024px) {
             width: 26px;
             height: 26px;
         }
-
         .explore-btn__button:hover & {
             fill: #FFFFFF;
         }
     }
 }
 .slide-img {
-    overflow-x: clip;
     padding: 32px 14px;
+    overflow-x: clip;
     @media screen and (min-width: 1440px) {
         padding: 32px 20px;
     }
 
 }
 .explore-img {
-
     @media screen and (min-width: 1024px) {
         padding-top: 64px;
         padding-bottom: 64px;
     }
     &__item {
         position: relative;
+
         border-radius: 32px 32px 32px 32px;
         border: 1px solid rgba(25, 24, 37, 0.1);
+
         transition: var(--transition-property);
+
+        overflow: hidden;
         &:hover {
-            // box-shadow: 0px 513px 205px rgba(0, 0, 0, 0.01), 0px 288px 173px rgba(0, 0, 0, 0.03), 0px 128px 128px rgba(0, 0, 0, 0.04), 0px 32px 71px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
             box-shadow: 0px 33px 28px -15px rgba(0, 0, 0, 0.53);
         }
-        
         .pic {
             display: block;
             width: 100%;
         }
-        
     }
 }
-
-.card{
-    position: relative;
+.card {
     padding: 32px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    
-    
+
     .title {
         margin-top: 8px;
         @include font-title($fs: 23px, $lh: 28px);
         color: var(--title-text-color);
         @media screen and (min-width: 1440px) {
             margin-top: 0;
-
             width: 235px;
         }
     }
     .text {
         margin-top: 16px;
         font-family: var(--secondary-font-family);
-        color: rgba(25, 24, 37, 0.75);
         @include font-text;
+        color: rgba(25, 24, 37, 0.75);
     }
     .rate {
         margin-top: 32px;
-        @include font-title($fs: 23px, $lh: 28px);
-        color: #FF5722;
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include font-title($fs: 23px, $lh: 28px);
+        color: #FF5722;
+        
         .icon {
             width: 24px;
             height: 24px;
         }
     }
     .price {
+        order: -1;
+
         @include font-title($fs: 23px, $lh: 28px);
         color: var(--accent-text-color);
-        order: -1;
+
         @media screen and (min-width: 1440px) {
             position: absolute;
             top: 32px;
             right: 32px;
         }
     }
-    
 }
 
 

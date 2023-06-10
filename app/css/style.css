@@ -1276,10 +1276,10 @@ input[type=password] {
   overflow-x: clip;
 }
 .services__wrapper {
+  padding: 32px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 16px;
   min-width: 0;
 }
 @media screen and (min-width: 1440px) {
@@ -1288,15 +1288,15 @@ input[type=password] {
   }
 }
 .services__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   text-align: center;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.1875;
   color: var(--title-text-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
 }
 @media screen and (min-width: 1440px) {
   .services__title {
@@ -1308,12 +1308,12 @@ input[type=password] {
 .services__title::before {
   content: "Services";
   text-align: center;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-text-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1875;
+  letter-spacing: 0.2em;
+  color: var(--accent-text-color);
 }
 @media screen and (min-width: 1440px) {
   .services__title::before {
@@ -1322,10 +1322,10 @@ input[type=password] {
 }
 .services__list {
   margin-top: 32px;
-  gap: 16px;
   display: flex;
   flex-direction: column;
   flex-grow: 0;
+  gap: 16px;
   scroll-behavior: smooth;
   z-index: 2;
 }
@@ -1343,8 +1343,8 @@ input[type=password] {
 
 @media screen and (min-width: 1440px) {
   .text-wrapper {
-    flex-grow: 1;
     margin-right: 40px;
+    flex-grow: 1;
   }
 }
 
@@ -1382,11 +1382,11 @@ input[type=password] {
   }
 }
 .categories__title {
+  text-align: center;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2083333333;
   color: var(--title-text-color);
-  text-align: center;
 }
 .categories__text {
   text-align: center;
@@ -1419,15 +1419,15 @@ input[type=password] {
 
 .explore-title__title {
   margin-top: 16px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.1875;
-  color: var(--title-text-color);
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1875;
+  color: var(--title-text-color);
 }
 @media screen and (min-width: 1024px) {
   .explore-title__title {
@@ -1447,13 +1447,13 @@ input[type=password] {
 }
 .explore-title__title::before {
   content: "Top Destination";
+  text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1875;
   color: var(--accent-text-color);
   letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: center;
 }
 @media screen and (min-width: 1024px) {
   .explore-title__title::before {
@@ -1496,16 +1496,15 @@ input[type=password] {
   }
 }
 .explore-btn__button::before {
-  position: absolute;
   content: "";
-  border-radius: 100px;
-  border: 2px solid var(--brand-color);
+  position: absolute;
   top: 0;
-  bottom: 0;
   right: 0;
   height: 100%;
   width: 100%;
   opacity: 0;
+  border-radius: 100px;
+  border: 2px solid var(--brand-color);
   background-color: var(--brand-color);
   transition: var(--transition-property);
 }
@@ -1513,10 +1512,10 @@ input[type=password] {
   opacity: 1;
 }
 .explore-btn__icon {
-  width: 20px;
-  height: 20px;
   position: relative;
   display: inline-block;
+  width: 20px;
+  height: 20px;
   transition: var(--transition-property);
 }
 @media screen and (min-width: 1024px) {
@@ -1530,8 +1529,8 @@ input[type=password] {
 }
 
 .slide-img {
-  overflow-x: clip;
   padding: 32px 14px;
+  overflow-x: clip;
 }
 @media screen and (min-width: 1440px) {
   .slide-img {
@@ -1550,6 +1549,7 @@ input[type=password] {
   border-radius: 32px 32px 32px 32px;
   border: 1px solid rgba(25, 24, 37, 0.1);
   transition: var(--transition-property);
+  overflow: hidden;
 }
 .explore-img__item:hover {
   box-shadow: 0px 33px 28px -15px rgba(0, 0, 0, 0.53);
@@ -1560,8 +1560,8 @@ input[type=password] {
 }
 
 .card {
-  position: relative;
   padding: 32px;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -1581,31 +1581,31 @@ input[type=password] {
 .card .text {
   margin-top: 16px;
   font-family: var(--secondary-font-family);
-  color: rgba(25, 24, 37, 0.75);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6111111111;
+  color: rgba(25, 24, 37, 0.75);
 }
 .card .rate {
   margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   font-size: 23px;
   line-height: 1.2173913043;
   color: #FF5722;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 .card .rate .icon {
   width: 24px;
   height: 24px;
 }
 .card .price {
+  order: -1;
   font-weight: 700;
   font-size: 23px;
   line-height: 1.2173913043;
   color: var(--accent-text-color);
-  order: -1;
 }
 @media screen and (min-width: 1440px) {
   .card .price {
@@ -1628,9 +1628,9 @@ input[type=password] {
 .point::before {
   content: "";
   display: block;
-  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 320px;
   max-width: 398px;
   height: 318px;
   background-image: url(../images/point-bg.png);
@@ -1651,10 +1651,10 @@ input[type=password] {
 }
 @media screen and (min-width: 1440px) {
   .point::before {
-    width: 871px;
-    max-width: none;
     margin-left: 0;
     margin-right: 0;
+    width: 871px;
+    max-width: none;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1666,9 +1666,9 @@ input[type=password] {
 }
 @media screen and (min-width: 1440px) {
   .point__wrapper {
-    width: 441px;
     margin-left: 0;
     margin-right: 0;
+    width: 441px;
   }
 }
 .point__title {
@@ -1677,10 +1677,10 @@ input[type=password] {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  text-align: center;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.1875;
-  text-align: center;
   color: var(--title-text-color);
 }
 @media screen and (min-width: 1024px) {
@@ -1692,18 +1692,18 @@ input[type=password] {
 }
 @media screen and (min-width: 1440px) {
   .point__title {
-    text-align: start;
     align-items: flex-start;
+    text-align: start;
   }
 }
 .point__title::before {
   content: "Travel Point";
   margin-top: 64px;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1875;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: var(--accent-text-color);
 }
 @media screen and (min-width: 1024px) {
@@ -1715,11 +1715,11 @@ input[type=password] {
 }
 .point__text {
   margin-top: 32px;
+  text-align: center;
   font-family: var(--secondary-font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center;
 }
 @media screen and (min-width: 1024px) {
   .point__text {
@@ -1745,33 +1745,33 @@ input[type=password] {
 }
 @media screen and (min-width: 1024px) {
   .point__list {
-    flex-direction: row;
-    flex-wrap: wrap;
     margin-top: 64px;
     margin-left: auto;
     margin-right: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1440px) {
   .point__list::before {
+    content: "";
     position: absolute;
     top: -140px;
     left: 284px;
-    content: "";
-    background-image: url(../images/point-icon.png);
-    background-size: cover;
     width: 285px;
     height: 353px;
+    background-image: url(../images/point-icon.png);
+    background-size: cover;
   }
 }
 .point__list .item {
+  padding: 31px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 31px;
+  width: 100%;
   border: 1px solid rgba(25, 24, 37, 0.1);
   border-radius: 32px;
-  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .point__list .item {
@@ -1801,18 +1801,18 @@ input[type=password] {
 }
 @media screen and (min-width: 1440px) {
   .features {
+    padding: 64px 0px 64px 128px;
     display: flex;
     gap: 70px;
-    padding: 64px 0px 64px 128px;
     max-width: none;
   }
 }
 .features::before {
   content: "";
-  display: block;
-  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
+  display: block;
+  min-width: 320px;
   max-width: 350px;
   height: 439px;
   background-image: url(../images/features-bg.png);
@@ -1839,15 +1839,15 @@ input[type=password] {
 @media screen and (min-width: 1440px) {
   .features::after {
     content: "";
+    margin-left: 0;
+    margin-right: 0;
     display: block;
+    width: 693px;
+    height: 869px;
     background-image: url(../images/features-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 693px;
-    height: 869px;
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 @media screen and (min-width: 1440px) and (min-device-pixel-ratio: 2), screen and (min-width: 1440px) and (min-resolution: 192dpi), screen and (min-width: 1440px) and (min-resolution: 2dppx) {
@@ -1856,11 +1856,11 @@ input[type=password] {
   }
 }
 .features__wrapper {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
   min-width: 300px;
   max-width: 350px;
 }
@@ -1871,9 +1871,9 @@ input[type=password] {
 }
 @media screen and (min-width: 1440px) {
   .features__wrapper {
+    align-items: flex-start;
     max-width: none;
     width: 550px;
-    align-items: flex-start;
   }
 }
 .features__title {
@@ -1897,18 +1897,18 @@ input[type=password] {
 }
 @media screen and (min-width: 1440px) {
   .features__title {
-    text-align: start;
     align-items: flex-start;
+    text-align: start;
   }
 }
 .features__title::before {
   content: "Key features";
   margin-top: 64px;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1875;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: var(--accent-text-color);
 }
 @media screen and (min-width: 1024px) {
@@ -1920,19 +1920,19 @@ input[type=password] {
 }
 .features__text {
   margin-top: 32px;
+  min-width: 320px;
+  text-align: center;
   font-family: var(--secondary-font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center;
-  min-width: 320px;
 }
 @media screen and (min-width: 1024px) {
   .features__text {
+    max-width: 830px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6111111111;
-    max-width: 830px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1971,30 +1971,30 @@ input[type=password] {
   height: 100px;
   border-radius: 32px;
 }
-.features__item .location {
+.features__item .image.location {
   background: #FF5722;
 }
-.features__item .calendar {
+.features__item .image.calendar {
   background: #FACD49;
 }
-.features__item .ticket {
+.features__item .image.ticket {
   background: #F85E9F;
 }
-.features__item .icon {
+.features__item .image .icon {
+  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-block;
   width: 48px;
   height: 48px;
+  transform: translate(-50%, -50%);
 }
 .features__item .title {
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 23px;
   line-height: 1.2173913043;
   color: var(--title-text-color);
-  margin-bottom: 8px;
 }
 .features__item .text {
   font-family: var(--secondary-font-family);
