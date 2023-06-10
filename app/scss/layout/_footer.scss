@@ -79,8 +79,10 @@
         color: #fff;
         font-size: 19px;
 
+
         transform: translate(-50%, -50%);
         transition: all 265ms ease-out;
+
         
         .social-icons__link:hover & {
             transform: scale(2) translate(-25%, -25%);
