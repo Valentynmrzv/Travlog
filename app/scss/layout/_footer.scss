@@ -1,6 +1,7 @@
 .footer {
+    position: relative;
     @media screen and (min-width: 1024px) {
-        margin-top: 64px;
+        padding-top: 64px;
     }
     &__wrapper {
         padding-top: 32px;
@@ -16,6 +17,21 @@
             flex-direction: row;
         }
 
+    }
+    &::before {
+        @media screen and (min-width: 1440px) {
+            content: '';
+            position: absolute;
+            top: -55px;
+            right: 0;
+
+            width: 112px;
+            height: 351px;
+
+            background-image: url(../images/footer-img.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
 }
 .description {

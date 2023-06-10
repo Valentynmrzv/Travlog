@@ -518,7 +518,7 @@ input[type=password] {
 
 .video-modal-content {
   position: relative;
-  max-width: 50em;
+  max-width: 70em;
   margin: 0 auto;
   display: block;
   padding: 0 3%;
@@ -552,8 +552,8 @@ input[type=password] {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -20px;
-  right: 35px;
+  top: -50px;
+  right: 10px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -2630,9 +2630,12 @@ input[type=password] {
     border: none;
   }
 }
+.footer {
+  position: relative;
+}
 @media screen and (min-width: 1024px) {
   .footer {
-    margin-top: 64px;
+    padding-top: 64px;
   }
 }
 .footer__wrapper {
@@ -2650,6 +2653,19 @@ input[type=password] {
 @media screen and (min-width: 1440px) {
   .footer__wrapper {
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    right: 0;
+    width: 112px;
+    height: 351px;
+    background-image: url(../images/footer-img.png);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
