@@ -38,7 +38,26 @@
         padding-top: 64px;
         padding-bottom: 64px;
     }
+    &::after {
+        @media screen and (min-width: 1024px) {
+            content: '';
+            position: absolute;
+            bottom: 150px;
+            left: 30px;
 
+            width: 65px;
+            height: 169px;
+        
+            background-image: url(../images/hero-left-img.png);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/hero-left-img@2x.png);
+                }
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
 }
 // ===============================================================================================//
 

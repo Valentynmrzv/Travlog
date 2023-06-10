@@ -951,6 +951,24 @@ input[type=password] {
     padding-bottom: 64px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .hero-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 150px;
+    left: 30px;
+    width: 65px;
+    height: 169px;
+    background-image: url(../images/hero-left-img.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .hero-wrapper::after {
+    background-image: url(../images/hero-left-img@2x.png);
+  }
+}
 
 .promo {
   margin-top: 32px;
