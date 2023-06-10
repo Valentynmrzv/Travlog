@@ -2001,9 +2001,9 @@ input[type=password] {
 }
 
 .reviews {
-  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
   overflow-x: clip;
 }
 @media screen and (min-width: 1024px) {
@@ -2018,13 +2018,13 @@ input[type=password] {
     position: absolute;
     top: -260px;
     left: 0px;
+    width: 1024px;
+    height: 900px;
+    overflow: visible;
     background-image: url(../images/reviews-bg-tablet.png);
     background-position: 50% 25%;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 1024px;
-    height: 900px;
-    overflow: visible;
   }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-width: 1024px) and (min-resolution: 2dppx) {
@@ -2034,10 +2034,10 @@ input[type=password] {
 }
 @media screen and (min-width: 1024px) and (min-width: 1440px) {
   .reviews::before {
-    opacity: 0.1;
     top: -85px;
     left: 0px;
     width: 1400px;
+    opacity: 0.1;
     background-image: url(../images/reviews-bg.png);
   }
 }
@@ -2047,15 +2047,15 @@ input[type=password] {
   }
 }
 .reviews__title {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.1875;
-  color: var(--title-text-color);
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1875;
+  color: var(--title-text-color);
 }
 @media screen and (min-width: 1024px) {
   .reviews__title {
@@ -2073,13 +2073,13 @@ input[type=password] {
 }
 .reviews__title::before {
   content: "Testimonials";
+  text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1875;
-  color: var(--accent-text-color);
   letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: center;
+  color: var(--accent-text-color);
 }
 @media screen and (min-width: 1024px) {
   .reviews__title::before {
@@ -2090,12 +2090,12 @@ input[type=password] {
 }
 
 .reviews-swiper {
-  overflow-x: clip;
   position: relative;
+  overflow-x: clip;
 }
 .reviews-swiper .swiper-pagination {
-  position: relative;
   margin-top: 64px;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .reviews-swiper .swiper-pagination {
@@ -2133,10 +2133,10 @@ input[type=password] {
 }
 .reviews-list__title {
   margin-top: 64px;
-  color: rgba(25, 24, 37, 0.75);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3333333333;
+  color: rgba(25, 24, 37, 0.75);
 }
 @media screen and (min-width: 380px) {
   .reviews-list__title {
@@ -2151,10 +2151,10 @@ input[type=password] {
   }
 }
 .reviews-list__title span {
-  color: #FF5722;
   font-weight: 700;
   font-size: 22px;
   line-height: 1.2727272727;
+  color: #FF5722;
 }
 @media screen and (min-width: 380px) {
   .reviews-list__title span {
@@ -2165,13 +2165,13 @@ input[type=password] {
 }
 .reviews-list__text {
   margin-top: 64px;
+  min-width: 200px;
+  max-width: 584px;
+  text-align: center;
   font-weight: 450;
   font-size: 18px;
   line-height: 1.6111111111;
   color: rgba(25, 24, 37, 0.75);
-  text-align: center;
-  min-width: 200px;
-  max-width: 584px;
 }
 @media screen and (min-width: 1024px) {
   .reviews-list__text {
@@ -2223,16 +2223,15 @@ input[type=password] {
   }
 }
 .reviews-btn__button::before {
-  position: absolute;
   content: "";
-  border-radius: 100px;
-  border: 2px solid var(--brand-color);
+  position: absolute;
   top: 0;
-  bottom: 0;
   right: 0;
   height: 100%;
   width: 100%;
   opacity: 0;
+  border-radius: 100px;
+  border: 2px solid var(--brand-color);
   background-color: var(--brand-color);
   transition: var(--transition-property);
 }
@@ -2256,10 +2255,10 @@ input[type=password] {
   }
 }
 .reviews-btn__icon {
-  width: 20px;
-  height: 20px;
   position: relative;
   display: inline-block;
+  width: 20px;
+  height: 20px;
   transition: var(--transition-property);
 }
 @media screen and (min-width: 1024px) {
@@ -2302,10 +2301,10 @@ input[type=password] {
   flex-direction: column;
   align-items: center;
   gap: 32px;
+  text-align: center;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.1875;
-  text-align: center;
   color: var(--title-text-color);
 }
 @media screen and (min-width: 1024px) {
@@ -2324,11 +2323,11 @@ input[type=password] {
 }
 .subscribe-wrapper__title::before {
   content: "subscribe to our newsletter";
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1875;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: var(--accent-text-color);
 }
 @media screen and (min-width: 1024px) {
@@ -2341,11 +2340,11 @@ input[type=password] {
 
 .form {
   margin-top: 64px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .form {
@@ -2395,21 +2394,21 @@ input[type=password] {
   position: absolute;
   top: 50%;
   left: 32px;
-  transform: translateY(-50%);
   width: 24px;
   height: 24px;
   fill: rgba(25, 24, 37, 0.75);
+  transform: translateY(-50%);
 }
 .form__button {
   padding: 24px 64px;
+  width: 100%;
   background: #5D50C6;
   border-radius: 16px;
-  width: 100%;
-  color: #FFFFFF;
   border: none;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1875;
+  color: #FFFFFF;
 }
 @media screen and (min-width: 1024px) {
   .form__button {
@@ -2422,18 +2421,18 @@ input[type=password] {
 }
 
 .btn-wrapper {
+  position: relative;
   width: 100%;
   height: 68px;
   text-align: center;
-  position: relative;
   background-color: transparent;
 }
 .btn-wrapper div {
   position: absolute;
   top: 50%;
   left: -50%;
-  transform: translate(50%, -50%);
   width: 100%;
+  transform: translate(50%, -50%);
 }
 
 .active {
@@ -2468,16 +2467,16 @@ input[type=password] {
   }
 }
 .active-btn {
+  padding: 0px;
+  width: 90px;
+  height: 90px;
   background-color: transparent;
   box-shadow: unset;
   border-radius: 50%;
+  border: 3px solid var(--brand-color);
   text-align: center;
   color: var(--brand-color);
   font-size: 30px;
-  width: 90px;
-  height: 90px;
-  padding: 0px;
-  border: 3px solid var(--brand-color);
 }
 
 .deactivate {
@@ -2488,7 +2487,7 @@ input[type=password] {
 }
 @media screen and (min-width: 1024px) {
   .deactivate {
-    animation: sub 0.7s 0.5s ease 1;
+    animation: tabl 0.7s 0.5s ease 1;
     animation-fill-mode: forwards;
   }
 }
@@ -2517,7 +2516,7 @@ input[type=password] {
     border: none;
   }
 }
-@keyframes sub {
+@keyframes tabl {
   0% {
     transform: scale(0.01);
     background-color: var(--brand-color);
@@ -2570,10 +2569,10 @@ input[type=password] {
   margin-top: 32px;
 }
 .description__text {
+  margin-top: 32px;
   font-weight: 450;
   font-size: 16px;
   line-height: 1.625;
-  margin-top: 32px;
 }
 @media screen and (min-width: 1024px) {
   .description__text {
@@ -2598,27 +2597,27 @@ input[type=password] {
   display: block;
 }
 .social-icons__link:before {
-  transform: scale(1) translate(0%, 0%);
   content: " ";
+  display: block;
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  display: block;
   background: var(--brand-color);
   transition: all 265ms ease-out;
+  transform: scale(1) translate(0%, 0%);
 }
 .social-icons__link:hover:before {
   transform: scale(0) translate(0%, 0%);
   transition: all 265ms ease-in;
 }
 .social-icons__icon {
-  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
+  color: #fff;
+  font-size: 19px;
   transform: translate(-50%, -50%);
   transition: all 265ms ease-out;
-  font-size: 19px;
 }
 .social-icons__link:hover .social-icons__icon {
   transform: scale(2) translate(-25%, -25%);
@@ -2727,16 +2726,16 @@ input[type=password] {
   color: var(--title-text-color);
 }
 .drop__button {
+  padding: 0;
   position: absolute;
   top: 2px;
   right: 0;
-  border-radius: 50%;
-  border: none;
-  padding: 0;
   width: 24px;
   height: 24px;
-  transition: 250ms;
+  border-radius: 50%;
+  border: none;
   background-color: transparent;
+  transition: 250ms;
 }
 .drop__button.open-button {
   transform: rotate(-180deg);
@@ -2747,7 +2746,6 @@ input[type=password] {
   height: 24px;
 }
 .drop__list {
-  transition: all 1s ease-out;
   display: none;
 }
 .dropdawn.mouse .drop:hover .drop__list {

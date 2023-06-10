@@ -2,7 +2,6 @@
     @media screen and (min-width: 1024px) {
         margin-top: 64px;
     }
-    
     &__wrapper {
         padding-top: 32px;
         padding-bottom: 32px;
@@ -25,14 +24,14 @@
         margin-top: 32px;
     }
     &__text {
-        @include font-text($fw: 450, $fs: 16px, $lh: 26px);
         margin-top: 32px;
 
+        @include font-text($fw: 450, $fs: 16px, $lh: 26px);
+        
         @media screen and (min-width: 1024px) {
             @include font-text($fw: 450, $fs: 23px, $lh: 37px); 
         }
     }
-   
 }
 // =========================================social====================================
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
@@ -53,14 +52,17 @@
         display: block;
 
         &:before {
-            transform: scale(1) translate(0%, 0%);
             content: " ";
+            display: block;
+
             width: 40px;
             height: 40px;
+
             border-radius: 100%;
-            display: block;
+            
             background: var(--brand-color);
             transition: all 265ms ease-out;
+            transform: scale(1) translate(0%, 0%);
         }
 
         &:hover:before {
@@ -70,14 +72,15 @@
     }
 
     &__icon {
-        color: #fff;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 265ms ease-out;
+
+        color: #fff;
         font-size: 19px;
 
+        transform: translate(-50%, -50%);
+        transition: all 265ms ease-out;
         
         .social-icons__link:hover & {
             transform: scale(2) translate(-25%, -25%);
@@ -130,6 +133,7 @@
         margin-top: 64px;
         display: flex;
         gap: 32px;
+
         width: 100%;
     }
 
@@ -141,6 +145,7 @@
     &__title {
         @include font-title($fs: 23px, $lh: 28px);
         color: var(--title-text-color);
+
         transition: 250ms;
 
         .organization__row:hover & {
@@ -150,6 +155,7 @@
 
     &__item {
         margin-top: 32px;
+
         @include font-text;
         color: var(--tertiary-text-color);
         transition: 250ms;
@@ -162,6 +168,7 @@
     &__link {
         @include font-text;
         color: var(--tertiary-text-color);
+
         transition: 250ms;
         &:hover {
             color: var(--brand-color);
@@ -175,11 +182,11 @@
     display: flex;
     flex-direction: column;
     gap: 64px;
+
     @media screen and (min-width: 1024px) {
         display: none;
     }
 }
-
 .drop {
     position: relative;
 
@@ -188,30 +195,33 @@
         color: var(--title-text-color);
     }
     &__button {
+        padding: 0;
+
         position: absolute;
         top: 2px;
         right: 0;
-        border-radius: 50%;
-        border: none;
-        padding: 0;
 
         width: 24px;
         height: 24px;
+
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+
         transition: 250ms;
 
-        background-color: transparent;
         &.open-button {
             transform: rotate(-180deg);
         }
     }
     &__icon {
         display: block;
+
         width: 24px;
         height: 24px;
     }
 
     &__list {
-        transition: all 1s ease-out;
         display: none;
 
         .dropdawn.mouse .drop:hover & {
@@ -223,6 +233,7 @@
     }
     &__item {
         margin-top: 32px;
+        
         @include font-text;
         color: var(--tertiary-text-color);
     }

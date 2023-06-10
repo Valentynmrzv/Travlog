@@ -1,8 +1,10 @@
 .reviews {
-    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
+    position: relative;
+    
     overflow-x: clip;
+
     @media screen and (min-width: 1024px) {
         padding-top: 64px;
         padding-bottom: 64px;
@@ -12,13 +14,16 @@
                 position: absolute;
                 top: -260px;
                 left: 0px;
+
+                width: 1024px;
+                height: 900px;
+                overflow: visible;
+
                 background-image: url(../images/reviews-bg-tablet.png);
                 background-position: 50% 25%;
                 background-size: cover;
                 background-repeat: no-repeat;
-                width: 1024px;
-                height: 900px;
-                overflow: visible;
+                
                 @media (min-device-pixel-ratio: 2),
                     (min-resolution: 192dpi),
                     (min-resolution: 2dppx) {
@@ -26,10 +31,12 @@
                 }
             }
             @media screen and (min-width: 1440px) {
-                opacity: 0.1;
                 top: -85px;
                 left: 0px;
+
                 width: 1400px;
+
+                opacity: 0.1;
                 background-image: url(../images/reviews-bg.png);
 
                 @media (min-device-pixel-ratio: 2),
@@ -37,22 +44,18 @@
                 (min-resolution: 2dppx) {
                     background-image: url(../images/reviews-bg@2x.png);
                 }
-
             }
         }
     }
-    
-
-    
-
     &__title {
-        @include font-title($fs: 32px, $lh: 38px);
-        color: var(--title-text-color);
-        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
+
+        text-align: center;
+        @include font-title($fs: 32px, $lh: 38px);
+        color: var(--title-text-color);
 
         @media screen and (min-width: 1024px) {
             @include font-title($fs: 40px, $lh: 48px);
@@ -64,27 +67,27 @@
 
         &::before {
             content: 'Testimonials';
-            @include font-title($fs: 16px, $lh: 19px);
-            color: var(--accent-text-color);
-            letter-spacing: 0.2em;
+
             text-transform: uppercase;
             text-align: center;
-
+            @include font-title($fs: 16px, $lh: 19px);
+            letter-spacing: 0.2em;
+            color: var(--accent-text-color);
+            
             @media screen and (min-width: 1024px) {
                 @include font-title($fs: 23px, $lh: 28px);
             }
-
         }
     }
-   
 }
 .reviews-swiper {
-    overflow-x: clip;
     position: relative;
+    overflow-x: clip;
 
     .swiper-pagination {
-        position: relative;
         margin-top: 64px;
+        position: relative;
+        
         @media screen and (min-width: 1024px) {
             padding-top: 56px;
         }
@@ -93,8 +96,8 @@
     .swiper-pagination-bullet {
         width: 24px;
         height: 24px;
-        background-color: rgba(25, 24, 37, 0.3);
 
+        background-color: rgba(25, 24, 37, 0.3);
         transform: none;
     }
     .swiper-pagination-bullet-active {
@@ -115,14 +118,17 @@
 
         .img {
             display: block;
+
             width: 128px;
             height: 128px;
         }
     }
     &__title {
         margin-top: 64px;
-        color: rgba(25, 24, 37, 0.75);
+
         @include font-title($fs: 18px, $lh: 24px);
+        color: rgba(25, 24, 37, 0.75);
+
         @media screen and (min-width: 380px) {
             @include font-title($fs: 23px, $lh: 28px);
         }
@@ -130,21 +136,24 @@
             margin-top: 56px;
         }
         span {
-            color: #FF5722; 
             @include font-title($fs: 22px, $lh: 28px);
+            color: #FF5722;
+
             @media screen and (min-width: 380px) {
                 @include font-title($fs: 28px, $lh: 34px);
             }
         }
-
     }
     &__text {
         margin-top: 64px;
-        @include font-text($fw: 450);
-        color: rgba(25, 24, 37, 0.75);
-        text-align: center;
+
         min-width: 200px;
         max-width: 584px;
+
+        text-align: center;
+        @include font-text($fw: 450);
+        color: rgba(25, 24, 37, 0.75);
+        
         @media screen and (min-width: 1024px) {
             margin-top: 56px;
             @include font-text($fw: 450, $fs: 23px, $lh: 37px)
@@ -167,7 +176,6 @@
         .icon {
             width: 32px;
             height: 32px;
-
         }
     }
 }
@@ -180,10 +188,12 @@
         position: relative;
         width: 64px;
         height: 64px;
+
         background-color: #FFFFFF;
         border-radius: 50%;
         border: 1px solid rgba(25, 24, 37, 0.1);
         transition: var(--transition-property);
+
         z-index: 10;
 
         @media screen and (min-width: 1024px) {
@@ -192,16 +202,18 @@
         }
 
         &::before {
-            position: absolute;
             content: '';
-            border-radius: 100px;
-            border: 2px solid var(--brand-color);
+            position: absolute;
+
             top: 0;
-            bottom: 0;
             right: 0;
+
             height: 100%;
             width: 100%;
             opacity: 0;
+            
+            border-radius: 100px;
+            border: 2px solid var(--brand-color);
 
             background-color: var(--brand-color);
             transition: var(--transition-property);
@@ -209,7 +221,6 @@
 
         &:hover::before {
             opacity: 1;
-
         }
     }
     .btn-prev {
@@ -217,6 +228,7 @@
             position: absolute;
             top: 50%;
             left: 0;
+            
             transform: translateY(-50%);
         }
     }
@@ -225,22 +237,23 @@
             position: absolute;
             top: 50%;
             right: 0;
+
             transform: translateY(-50%);
         }
     }
-
     &__icon {
+        position: relative;
+        display: inline-block;  
+
         width: 20px;
         height: 20px;
-        position: relative;
-        display: inline-block;
+        
         transition: var(--transition-property);
 
         @media screen and (min-width: 1024px) {
             width: 26px;
             height: 26px;
         }
-
         .explore-btn__button:hover & {
             fill: #FFFFFF;
         }
