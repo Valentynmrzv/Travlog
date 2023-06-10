@@ -3,8 +3,8 @@
     overflow-x: clip;
     &::before {
         @media screen and (min-width: 1024px) {
-            position: absolute;
             content: '';
+            position: absolute;
             bottom: -120px;
             right: -411px;
 
@@ -20,16 +20,18 @@
 
             width: 500px;
             height: 500px;
+
             filter: blur(250px);
         }
     }
 }
 .hero-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
     padding-top: 32px;
     padding-bottom: 32px;
 
+    display: flex;
+    flex-direction: column-reverse;
+    
     @media screen and (min-width: 1440px) {
         flex-direction: row;
         padding-top: 64px;
@@ -38,11 +40,12 @@
 
 }
 .promo {
+    margin-top: 32px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 32px;
-
+    
     @media screen and (min-width: 1024px) {
         margin-top: 64px;
     }
@@ -51,66 +54,74 @@
         height: 577px;
     }
     
-
     &__link {
-        font-family: var(--primary-font-family);
-        @include font-title($fs: 14px, $lh: 17px);
-        color: var(--accent-text-color);
+        padding: 16px 32px;
         display: flex;
         flex-direction: row;
         text-align: center;
         align-items: flex-end;
-        padding: 16px 32px;
         gap: 16px;
-    
+
         width: 224px;
         height: 56px;
+
+        font-family: var(--primary-font-family);
+        @include font-title($fs: 14px, $lh: 17px);
+        color: var(--accent-text-color);
 
         background: #FFFFFF;
         box-shadow: 0px 548px 219px rgba(0, 0, 0, 0.01), 0px 308px 185px rgba(0, 0, 0, 0.04), 0px 137px 137px rgba(0, 0, 0, 0.06), 0px 34px 75px rgba(0, 0, 0, 0.07), 0px 0px 0px rgba(0, 0, 0, 0.07);
         border-radius: 100px;
         transition: 250ms;
-        .icon {
-            width: 24px;
-            height: 24px;
-        }
+        
         &:hover {
             color: var(--accent-text-color);
             box-shadow: 0px 81px 32px rgba(0, 0, 0, 0.01), 0px 45px 27px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.09), 0px 5px 11px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
         }
     }
 
     &__title {
         margin-top: 16px;
+
+        text-align: center;
         font-family: var(--primary-font-family);
         @include font-title($fs: 40px, $lh: 48px);
         color: #000000;
-        text-align: center;
-
+        
         .accent {
             color: var(--accent-text-color);
         }
 
         @media screen and (min-width: 1024px) {
-            @include font-title($fs: 56px, $lh: 67px);
             margin-top: 43px;
             padding-left: 130px;
             padding-right: 130px;
+
+            @include font-title($fs: 56px, $lh: 67px);
         }
+
         @media screen and (min-width: 1440px) {
             padding: 0;
+
             text-align: start;
             @include font-title($fs: 69px, $lh: 82px);
         }
     }
     &__text {
         margin-top: 24px;
+
+        text-align: center;
         font-family: var(--secondary-font-family);
         @include font-text($fs: 16px, $lh: 26px);
-        text-align: center;
 
         @media screen and (min-width: 1024px) {
             margin-top: 43px;
+
             @include font-title($fs: 18px, $lh: 29px);
         }
         @media screen and (min-width: 1440px) {
@@ -119,7 +130,6 @@
     }
 }
 .button {
-
     &__list {
         margin-top: 32px;
         display: flex;
@@ -127,27 +137,32 @@
         justify-content: center;
         align-items: center;
         gap: 8px;
+
         width: 100%;
 
         @media screen and (min-width: 1024px) {
-            flex-direction: row;
             margin-top: 43px;
+            flex-direction: row;
+        }
+        @media screen and (min-width: 1024px) {
+            justify-content: flex-start;
         }
     }
 
     &__item {
-        
         padding: 24px 32px;
+
         width: 100%;
         height: 65px;
+
         border-radius: 100px;
 
         @media screen and (min-width: 1024px) {
             padding: 16px 32px;
+
             width: 145px;
             height: 49px;
         }
-
         &.started {
             background: #5D50C6;
             transition: 250ms;
@@ -156,7 +171,6 @@
                 box-shadow: 0px 81px 32px rgba(0, 0, 0, 0.01), 0px 45px 27px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.09), 0px 5px 11px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
             }
         }
-
         &.demo {
             background: #FFFFFF;
             border: 1px solid #EEEEEE;
@@ -172,47 +186,45 @@
     }
 
     &__link {
-        @include font-title($fs: 14px, $lh: 17px);
-        font-family: var(--primary-font-family);
-        text-align: start;
-
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
+        @include font-title($fs: 14px, $lh: 17px);
+        font-family: var(--primary-font-family);
+        text-align: start;
+        
+
         &.started {
             color: #EEEEEE;
         }
-
         &.demo {
             color: var(--secondary-text-color);
         }
-        
-
         .icon {
+            margin-right: 8px;
+
             width: 20px;
             height: 20px;
-            margin-right: 8px;
         }
     }
-
-
-
 }
 
-
-
 .img-hero {
+    max-width: 100%;
+
     background-image: url(../images/hero-layers.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    max-width: 100%;
 
     @media screen and (min-width: 1024px) {
         margin-left: 62px;
         margin-right: 62px;
         
+    }
+    @media screen and (min-width: 1440px) {
+        margin: 0;
     }
 
     &__list {
@@ -223,34 +235,32 @@
         flex-direction: column;
 
         width: 295px;
+
         @media screen and (min-width: 1024px) {
-            width: 575px;
             margin-top: 75px;
             margin-left: 91px;
+            width: 575px;
         }
-
     }
-
     &__item {
         &:first-child {
             padding-bottom: 16px;
+
             @media screen and (min-width: 1024px) {
                 padding-bottom: 32px;
-                
             }
-
         }
-        
         .image {
-            border-radius: 16.42px;
             width: 139px;
 
+            border-radius: 16.42px;
+
             @media screen and (min-width: 1024px) {
-                border-radius: 32px;
                 width: 272px;
+
+                border-radius: 32px;
             }
         }
-
         .absolute {
             position: absolute;
             top: 59px;
@@ -259,44 +269,46 @@
             @media screen and (min-width: 1024px) {
                 top: 116px;
             }
-
-
         }
     }
-
     &__icon {
         position: absolute;
-        width: 33px;
-        height: 33px;
-        border-radius: 50%;
+        padding: 8px;
+
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        padding: 8px;
         gap: 4.11px;
 
+        width: 33px;
+        height: 33px;
+
+        border-radius: 50%;
+
         @media screen and (min-width: 1024px) {
-            width: 64px;
-            height: 64px;
             padding: 16px;
             gap: 8px;
+
+            width: 64px;
+            height: 64px;
         }
 
         &.message {
-            background-color: #F85E9F;
             left: -16.4px;
             top: 136.5px;
+
+            background-color: #F85E9F;
 
             @media screen and (min-width: 1024px) {
                 left: -32px;
                 top: 266px;
             }
         }
-
         &.user {
-            background-color: #FF5722;
             top: 291.65px;
             left: 196.6px;
+
+            background-color: #FF5722;
             box-shadow: 0px 77px 31px rgba(0, 0, 0, 0.01), 0px 43px 26px rgba(0, 0, 0, 0.05), 0px 19px 19px rgba(0, 0, 0, 0.09);
             border-radius: 50%;
 
@@ -305,27 +317,29 @@
                 top: 574px;
             }
         }
-
     }
-
     &__link {
         position: absolute;
+        padding: 8.21318px 16.4264px;
         top: 37px;
         left: 130px;
+
         display: flex;
         flex-direction: row;
         gap: 4px;
         align-items: center;
-        padding: 8.21318px 16.4264px;
+        
        
         width: 85.21px;
         height: 28.75px;
+
         background-color: var(--primary-bg-color);
         border-radius: 51.3324px;
-
-        color: #393E46;
+        
         @include font-title($fs: 7px, $lh: 8px);
         font-family: var(--primary-font-family);
+        color: #393E46;
+
         transition: var(--transition-property);
         animation: swing 6s infinite;
         animation-timing-function: ease-in-out;
@@ -336,13 +350,25 @@
         }
 
         @media screen and (min-width: 1024px) {
-            width: 166px;
-            height: 56px;
             padding: 16px 32px;
             top: 413px;
             left: 501px;
             gap: 6px;
+
+            width: 166px;
+            height: 56px;
+
             @include font-title($fs: 14px, $lh: 17px);
+        }
+        .icon {
+            width: 12px;
+            height: 12px;
+            fill: #5D50C6;
+        
+            @media screen and (min-width: 1024px) {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }
@@ -378,16 +404,6 @@
         transform: rotate(2deg);
     }
 }
-.img-hero__link-icon {
-    width: 12px;
-    height: 12px;
-    fill: #5D50C6;
-
-    @media screen and (min-width: 1024px) {
-        width: 24px;
-        height: 24px;
-    }
-}
 
 .company {
     padding: 32px 0px;
@@ -398,38 +414,38 @@
 
 
     &__list {
+        margin-left: auto;
+        margin-right: auto;
+
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 27px;
-        margin-left: auto;
-        margin-right: auto;
+
         max-width: 380px;
+
         @media screen and (min-width: 1024px) {
             max-width: 568px;
         }
         @media screen and (min-width: 1440px) {
             flex-wrap: nowrap;
+
             max-width: 100%;
         }
-
-
     }
-
     &__item {
         width: calc((100% - 54px) / 3);
-        
         &:nth-child(3n) {
             margin-right: 0px;
             margin-bottom: 32px;
         }
     }
-
     &__icon {
         width: 100%;
         height: 20px;
         fill: #191825;
         opacity: 0.5;
+
         transition-property: all;
         transition-timing-function: linear;
         transition: 1000ms;
@@ -437,9 +453,9 @@
         .company__item:hover &{
             fill:  var(--brand-color);
             transform: rotateX(360deg);
+
             opacity: 1;
         }
-
         @media screen and (min-width: 1024px) {
             height: 32px;
         }

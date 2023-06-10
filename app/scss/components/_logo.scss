@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
     @include font-title($fw: 900, $fs: 24px, $lh: 40px);
     font-family: var(--primary-font-family);
-    
     color: var(--title-text-color);
 
     &:hover {
@@ -27,15 +27,15 @@
     height: 40px;
     border-radius: 50%;
     background: var(--brand-color);
-}
-
-.loader-img svg {
-    height: 100%;
-    position: absolute;
-}
-
-.loader-img svg.plane {
-    width: 100%;
+    svg {
+        height: 100%;
+        position: absolute;
+    }
+    svg.plane {
+        width: 100%;
+        -webkit-animation: 4s linear infinite plane;
+        animation: 4s linear infinite plane;
+    }
 }
 
 @-webkit-keyframes clouds {
@@ -49,7 +49,6 @@
         transform: translateX(-130px);
     }
 }
-
 @keyframes clouds {
     0% {
         -webkit-transform: translateX(60px);
@@ -61,14 +60,12 @@
         transform: translateX(-130px);
     }
 }
-
 .loader-img svg.clouds {
     -webkit-animation: 4s linear infinite clouds;
     animation: 4s linear infinite clouds;
     width: 130px;
 
 }
-
 @-webkit-keyframes plane {
 
     0%,
@@ -82,7 +79,6 @@
         transform: translateY(-5px);
     }
 }
-
 @keyframes plane {
 
     0%,
@@ -97,9 +93,6 @@
     }
 }
 
-.loader-img svg.plane {
-    -webkit-animation: 4s linear infinite plane;
-    animation: 4s linear infinite plane;
-}
+
 
 
