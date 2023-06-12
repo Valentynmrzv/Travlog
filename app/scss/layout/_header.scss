@@ -332,21 +332,8 @@
     }
 }
 
-.menu-text-expand {
-    color: #000000;
-    opacity: 0.8;
-    padding: 10px;
-    text-align: center;
-    font-family: var(--primary-font-family);
-    @include font-title($fw: 700, $fs: 28px, $lh: 24px);
-    -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
-    transition: all 0.2s 0.7s, font-size 0.1s;
-    z-index: 5;
-    &:hover {
-        color: #000000
-    }
-}
 .menu-login {
+    scale: (0.0);
     @include font-title($fw: 700, $fs: 22px, $lh: 24px);
     border-radius: 100px;
     border: 2px solid var(--brand-color);
@@ -360,6 +347,26 @@
         -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
         box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+    }
+}
+
+.menu-text-expand {
+    padding: 10px;
+
+    // display: block;
+    color: #000000;
+    opacity: 0.8;
+
+    text-align: center;
+    font-family: var(--primary-font-family);
+    @include font-title($fw: 700, $fs: 28px, $lh: 24px);
+    -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
+    transition: all 0.2s 0.7s, font-size 0.1s;
+    z-index: 5;
+    scale: (1);
+
+    &:hover {
+        color: #000000
     }
 }
 // =======================================================MOBILE MENU END===========================================================//

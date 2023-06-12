@@ -878,24 +878,8 @@ input[type=password] {
   }
 }
 
-.menu-text-expand {
-  color: #000000;
-  opacity: 0.8;
-  padding: 10px;
-  text-align: center;
-  font-family: var(--primary-font-family);
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 0.8571428571;
-  -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
-  transition: all 0.2s 0.7s, font-size 0.1s;
-  z-index: 5;
-}
-.menu-text-expand:hover {
-  color: #000000;
-}
-
 .menu-login {
+  scale: 0;
   font-weight: 700;
   font-size: 22px;
   line-height: 1.0909090909;
@@ -910,6 +894,24 @@ input[type=password] {
   -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+}
+
+.menu-text-expand {
+  padding: 10px;
+  color: #000000;
+  opacity: 0.8;
+  text-align: center;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 0.8571428571;
+  -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
+  transition: all 0.2s 0.7s, font-size 0.1s;
+  z-index: 5;
+  scale: 1;
+}
+.menu-text-expand:hover {
+  color: #000000;
 }
 
 .hero {
