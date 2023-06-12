@@ -170,7 +170,7 @@
     }
 }
 .active {
-    transition: var(--transition-property);
+    transition: .8s;
     transform: scale(.01);
     animation: send .7s .5s ease 1;
     animation-fill-mode: forwards;
@@ -218,7 +218,7 @@
     font-size: 30px;
 }
 .deactivate {
-    transition: var(--transition-property);
+    transition: .8s;
     transform: scale(.01);
     animation: mob .7s .5s ease 1;
     animation-fill-mode: forwards;

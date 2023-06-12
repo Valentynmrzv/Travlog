@@ -473,7 +473,7 @@
 
         transition-property: all;
         transition-timing-function: linear;
-        transition: 700ms;
+        transition: 700ms ease-in-out;
 
         .company__item:hover &{
             fill:  var(--brand-color);

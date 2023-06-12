@@ -9,7 +9,7 @@
   --primary-bg-color: #FFFFFF;
   --primary-font-family: "Circular Std";
   --secondary-font-family: "Inter";
-  --transition-property: 150ms ease-in-out;
+  --transition-property: all 150ms ease-in-out;
 }
 
 .visually-hidden {
@@ -1369,7 +1369,7 @@ input[type=password] {
   opacity: 0.5;
   transition-property: all;
   transition-timing-function: linear;
-  transition: 700ms;
+  transition: 700ms ease-in-out;
 }
 .company__item:hover .company__icon {
   fill: var(--brand-color);
@@ -1666,7 +1666,9 @@ input[type=password] {
   overflow: hidden;
 }
 .explore-img__item:hover {
-  box-shadow: 0px 33px 28px -15px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 0px -5px 37px -19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -5px 37px -19px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -5px 37px -19px rgba(0, 0, 0, 0.75);
 }
 .explore-img__item .pic {
   display: block;
@@ -2551,7 +2553,7 @@ input[type=password] {
 }
 
 .active {
-  transition: var(--transition-property);
+  transition: 0.8s;
   transform: scale(0.01);
   animation: send 0.7s 0.5s ease 1;
   animation-fill-mode: forwards;
@@ -2595,7 +2597,7 @@ input[type=password] {
 }
 
 .deactivate {
-  transition: var(--transition-property);
+  transition: 0.8s;
   transform: scale(0.01);
   animation: mob 0.7s 0.5s ease 1;
   animation-fill-mode: forwards;
@@ -2734,12 +2736,12 @@ input[type=password] {
   height: 40px;
   border-radius: 100%;
   background: var(--brand-color);
-  transition: all 265ms ease-out;
+  transition: var(--transition-property);
   transform: scale(1) translate(0%, 0%);
 }
 .social-icons__link:hover:before {
   transform: scale(0) translate(0%, 0%);
-  transition: all 265ms ease-in;
+  transition: var(--transition-property);
 }
 .social-icons__icon {
   position: absolute;
@@ -2748,14 +2750,14 @@ input[type=password] {
   color: #fff;
   font-size: 24px;
   transform: translate(-50%, -50%);
-  transition: all 265ms ease-out;
+  transition: var(--transition-property);
 }
 .social-icons__link:hover .social-icons__icon {
   transform: scale(2) translate(-25%, -25%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 265ms ease-in;
+  transition: var(--transition-property);
 }
 .social-icons__link:hover .social-icons__icon.fa-facebook {
   color: transparent;
@@ -2806,7 +2808,7 @@ input[type=password] {
   font-size: 23px;
   line-height: 1.2173913043;
   color: var(--title-text-color);
-  transition: 250ms;
+  transition: var(--transition-property);
 }
 .organization__item {
   margin-top: 32px;
@@ -2814,7 +2816,7 @@ input[type=password] {
   font-size: 18px;
   line-height: 1.6111111111;
   color: var(--tertiary-text-color);
-  transition: 250ms;
+  transition: var(--transition-property);
 }
 .organization__link {
   display: inline-block;
@@ -2823,7 +2825,7 @@ input[type=password] {
   font-size: 18px;
   line-height: 1.6111111111;
   color: var(--tertiary-text-color);
-  transition: 250ms;
+  transition: var(--transition-property);
 }
 .organization__item:hover .organization__link {
   scale: 1.3;
@@ -2862,7 +2864,7 @@ input[type=password] {
   border-radius: 50%;
   border: none;
   background-color: transparent;
-  transition: 250ms;
+  transition: var(--transition-property);
 }
 .drop__button.open-button {
   transform: rotate(-180deg);
