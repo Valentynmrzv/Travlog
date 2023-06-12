@@ -86,7 +86,7 @@
     border: 1px solid rgba(25, 24, 37, 0.1);
     border-radius: 32px;
 
-    transition: 500ms;
+    transition: var(--transition-property);
     @media screen and (min-width: 1024px) {
         padding: 64px;
     }

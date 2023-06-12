@@ -1010,7 +1010,7 @@ input[type=password] {
   background: #FFFFFF;
   box-shadow: 0px 548px 219px rgba(0, 0, 0, 0.01), 0px 308px 185px rgba(0, 0, 0, 0.04), 0px 137px 137px rgba(0, 0, 0, 0.06), 0px 34px 75px rgba(0, 0, 0, 0.07), 0px 0px 0px rgba(0, 0, 0, 0.07);
   border-radius: 100px;
-  transition: 250ms;
+  transition: var(--transition-property);
 }
 .promo__link:hover {
   color: var(--accent-text-color);
@@ -1125,7 +1125,7 @@ input[type=password] {
 .button__link.started {
   border: none;
   background: #5D50C6;
-  transition: 250ms;
+  transition: var(--transition-property);
   color: #EEEEEE;
 }
 .button__link.started:hover {
@@ -1135,7 +1135,7 @@ input[type=password] {
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
   color: var(--secondary-text-color);
-  transition: 250ms;
+  transition: var(--transition-property);
 }
 @media screen and (min-width: 1024px) {
   .button__link.demo {
@@ -1471,7 +1471,7 @@ input[type=password] {
   background: var(--primary-bg-color);
   border: 1px solid rgba(25, 24, 37, 0.1);
   border-radius: 32px;
-  transition: 500ms;
+  transition: var(--transition-property);
 }
 @media screen and (min-width: 1024px) {
   .categories {
@@ -2382,7 +2382,7 @@ input[type=password] {
     height: 26px;
   }
 }
-.explore-btn__button:hover .reviews-btn__icon {
+.reviews-btn__button:hover .reviews-btn__icon {
   fill: #FFFFFF;
 }
 
@@ -2551,7 +2551,7 @@ input[type=password] {
 }
 
 .active {
-  transition: 0.8s;
+  transition: var(--transition-property);
   transform: scale(0.01);
   animation: send 0.7s 0.5s ease 1;
   animation-fill-mode: forwards;
@@ -2595,7 +2595,7 @@ input[type=password] {
 }
 
 .deactivate {
-  transition: 0.8s;
+  transition: var(--transition-property);
   transform: scale(0.01);
   animation: mob 0.7s 0.5s ease 1;
   animation-fill-mode: forwards;
