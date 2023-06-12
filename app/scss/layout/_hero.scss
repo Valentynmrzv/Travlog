@@ -473,11 +473,11 @@
 
         transition-property: all;
         transition-timing-function: linear;
-        transition: 1000ms;
+        transition: 700ms;
 
         .company__item:hover &{
             fill:  var(--brand-color);
-            transform: rotateX(360deg);
+            // transform: rotateX(360deg);
 
             opacity: 1;
         }
