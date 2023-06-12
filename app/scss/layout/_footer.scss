@@ -93,13 +93,11 @@
         left: 50%;
 
         color: #fff;
-        font-size: 19px;
-
+        font-size: 24px;
 
         transform: translate(-50%, -50%);
         transition: all 265ms ease-out;
 
-        
         .social-icons__link:hover & {
             transform: scale(2) translate(-25%, -25%);
             -webkit-background-clip: text;
