@@ -9,6 +9,7 @@
     @media screen and (min-width: 1024px) {
         padding-top: 64px;
         padding-bottom: 64px;
+        
         &::before {
                 @media screen and (min-width: 1024px) {
                 content: '';
@@ -24,6 +25,8 @@
                 background-position: 50% 25%;
                 background-size: cover;
                 background-repeat: no-repeat;
+                // pointer-events: none;
+                z-index: -1;
                 
                 @media (min-device-pixel-ratio: 2),
                     (min-resolution: 192dpi),
