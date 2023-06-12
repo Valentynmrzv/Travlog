@@ -9,7 +9,7 @@
   --primary-bg-color: #FFFFFF;
   --primary-font-family: "Circular Std";
   --secondary-font-family: "Inter";
-  --transition-property: all 150ms ease-in-out;
+  --transition-property: all 250ms ease-in-out;
 }
 
 .visually-hidden {
@@ -2750,14 +2750,14 @@ input[type=password] {
   color: #fff;
   font-size: 24px;
   transform: translate(-50%, -50%);
-  transition: var(--transition-property);
+  transition: 300ms ease-in-out;
 }
 .social-icons__link:hover .social-icons__icon {
   transform: scale(2) translate(-25%, -25%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: var(--transition-property);
+  transition: 300ms ease-in-out;
 }
 .social-icons__link:hover .social-icons__icon.fa-facebook {
   color: transparent;

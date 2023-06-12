@@ -96,14 +96,14 @@
         font-size: 24px;
 
         transform: translate(-50%, -50%);
-        transition: var(--transition-property);
+        transition: 300ms ease-in-out;
 
         .social-icons__link:hover & {
             transform: scale(2) translate(-25%, -25%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            transition: var(--transition-property);
+            transition: 300ms ease-in-out;
 
             &.fa-facebook {
                 color: transparent;
