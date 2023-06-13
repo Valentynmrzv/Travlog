@@ -2206,7 +2206,7 @@ input[type=password] {
 
 .reviews-swiper {
   position: relative;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 .reviews-swiper .swiper-pagination {
   margin-top: 64px;

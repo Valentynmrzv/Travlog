@@ -86,7 +86,7 @@
 }
 .reviews-swiper {
     position: relative;
-    overflow-x: clip;
+    overflow-x: hidden;
 
     .swiper-pagination {
         margin-top: 64px;
