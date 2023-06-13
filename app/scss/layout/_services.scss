@@ -1,6 +1,6 @@
 // ==================================== SERVICES  ===================================================//
 .services {
-    overflow-x: clip;
+    overflow-x: hidden;
 
     &__wrapper {
         padding: 32px 16px;
@@ -247,7 +247,7 @@
 }
 .slide-img {
     padding: 32px 14px;
-    overflow-x: clip;
+    overflow-x: hidden;
     @media screen and (min-width: 1440px) {
         padding: 32px 20px;
     }
